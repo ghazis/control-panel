@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Button from './components/button';
+import Table from './components/table';
 import { Provider } from 'react-redux';
 import configureStore from './store/configureStore';
 
@@ -11,7 +11,7 @@ class App extends Component {
   render() {
     return (
       <Provider store={store}>
-        <Button />
+        <Table />
       </Provider>
     );
   }

@@ -57,7 +57,7 @@
 /******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
 /******/
 /******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "/Users/Ashhad/React/current_project/dist/";
+/******/ 	__webpack_require__.p = "/Users/Ashhad/React/control_panel/dist/";
 /******/
 /******/ 	// Load entry module and return exports
 /******/ 	return __webpack_require__(__webpack_require__.s = 755);
@@ -68,7 +68,7 @@
 /***/ 755:
 /***/ (function(module, exports) {
 
-module.exports = "<html class=\"no-js\" lang=\"en\">\n\n<head>\n  <meta charset=\"utf-8\" />\n  <meta name=\"viewport\" content=\"width=device-width\" />\n  <title>Boilerplate for react with ES6</title>\n  <meta name=\"theme-color\" content=\"#ffffff\">\n\n    <link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css\">\n\n    <!-- Optional theme -->\n    <link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css\">\n\n    <!-- Latest compiled and minified JavaScript -->\n    <script src=\"https://code.jquery.com/jquery-2.1.4.min.js\"></script>\n    <script src=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js\"></script>\n\n</head>\n<body>\n\t&nbsp;\n    <div class=\"container\">\n      <div class=\"panel panel-info\">\n        <div class=\"panel-heading text-center\">Ashhad's Security Console</div>\n        <div class=\"panel-body\" id=\"root\"></div>\n      </div>\n    </div>\n  <script src=\"/dist/app.js\"></script>\n</body>\n</html>\n";
+module.exports = "<html class=\"no-js\" lang=\"en\">\n\n<head>\n  <meta charset=\"utf-8\" />\n  <meta name=\"viewport\" content=\"width=device-width\" />\n  <title>Boilerplate for react with ES6</title>\n  <meta name=\"theme-color\" content=\"#ffffff\">\n\n    <link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css\">\n\n    <!-- Optional theme -->\n    <link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css\">\n\n    <!-- Latest compiled and minified JavaScript -->\n    <script src=\"https://code.jquery.com/jquery-2.1.4.min.js\"></script>\n    <script src=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js\"></script>\n\n</head>\n<body>\n\t&nbsp;\n    <div class=\"container\">\n      <div class=\"panel panel-info\">\n        <div class=\"panel-heading text-center\">Ashhad's Control Panel</div>\n        <div class=\"panel-body\" id=\"root\"></div>\n      </div>\n    </div>\n  <script src=\"/dist/app.js\"></script>\n</body>\n</html>\n";
 
 /***/ })
 
