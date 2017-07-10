@@ -1,4 +1,5 @@
 import { InitialButtonsState, swStateOn, swStateOff, carStateOn, carStateOff, carLockStateOn, carLockStateOff } from './states';
+import { fan_off, fan_on, heater_off, heater_on, tv_off, tv_on } from '../components/images';
 
 export function buttonToggle(state = InitialButtonsState, action) {
     switch (action.type) {
@@ -15,22 +16,22 @@ export function buttonToggle(state = InitialButtonsState, action) {
         case 'BUTTON_TOGGLE_ON_SW02':
             return {
                 ...state,
-                    sw02: swStateOn
+                    sw02: {...swStateOn, img: fan_on}
             }
         case 'BUTTON_TOGGLE_OFF_SW02':
             return {
                 ...state,
-                    sw02: swStateOff
+                    sw02: {...swStateOff, img: fan_off}
             }
         case 'BUTTON_TOGGLE_ON_SW03':
             return {
                 ...state,
-                    sw03: swStateOn
+                    sw03: {...swStateOn, img: heater_on}
             }
         case 'BUTTON_TOGGLE_OFF_SW03':
             return {
                 ...state,
-                    sw03: swStateOff
+                    sw03: {...swStateOff, img: heater_off}
             }
         case 'BUTTON_TOGGLE_ON_SW04':
             return {
@@ -45,12 +46,12 @@ export function buttonToggle(state = InitialButtonsState, action) {
         case 'BUTTON_TOGGLE_ON_SW05':
             return {
                 ...state,
-                    sw05: swStateOn
+                    sw05: {...swStateOn, img: tv_on}
             }
         case 'BUTTON_TOGGLE_OFF_SW05':
             return {
                 ...state,
-                    sw05: swStateOff
+                    sw05: {...swStateOff, img: tv_off}
             }
         case 'BUTTON_TOGGLE_ON_CAR':
             return {

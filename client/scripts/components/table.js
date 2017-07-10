@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import { SW01, SW02, SW03, SW04, SW05, StartCarButton, LockCarButton } from './buttons';
 import { Table } from 'react-bootstrap';
+import { connect } from 'react-redux';
 
-export default class AppTable extends Component {
+class AppTable extends Component {
 
   render () {
     return (
@@ -10,51 +11,38 @@ export default class AppTable extends Component {
       <Table responsive>
         <thead>
           <tr>
-            <th>#</th>
-            <th>Table heading</th>
-            <th>Table heading</th>
-            <th>Table heading</th>
-            <th>Table heading</th>
-            <th>Table heading</th>
-            <th>Table heading</th>
+            <th>Controls</th>
+            <th className="text-center">Status</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td>1</td>
             <td><SW01 /></td>
-            <td>Table cell</td>
-            <td>Table cell</td>
-            <td>Table cell</td>
-            <td>Table cell</td>
-            <td>Table cell</td>
+            <td className="text-center"><img src={this.props.buttonData.sw01.img} style={{ width: 50 }}></img></td>
           </tr>
           <tr> 
-            <td>2</td>
             <td><SW02 /></td>
-            <td>Table cell</td>
-            <td>Table cell</td>
-            <td>Table cell</td>
-            <td>Table cell</td>
-            <td>Table cell</td>
+            <td className="text-center"><img src={this.props.buttonData.sw02.img} style={{ width: 50 }}></img></td>
+          </tr>
+          <tr> 
+            <td><SW03 /></td>
+            <td className="text-center"><img src={this.props.buttonData.sw03.img} style={{ width: 50 }}></img></td>
+          </tr>
+          <tr> 
+            <td><SW04 /></td>
+            <td className="text-center"><img src={this.props.buttonData.sw04.img} style={{ width: 50 }}></img></td>
+          </tr>
+          <tr> 
+            <td><SW05 /></td>
+            <td className="text-center"><img src={this.props.buttonData.sw05.img} style={{ width: 50 }}></img></td>
           </tr>
           <tr>
-            <td>3</td>
             <td><StartCarButton /></td>
-            <td>Table cell</td>
-            <td>Table cell</td>
-            <td>Table cell</td>
-            <td>Table cell</td>
-            <td>Table cell</td>
+            <td><img className="text-centerr" src={this.props.buttonData.car.img} style={{ width: 200 }}></img></td>
           </tr>
           <tr>
-            <td>3</td>
             <td><LockCarButton /></td>
-            <td>Table cell</td>
-            <td>Table cell</td>
-            <td>Table cell</td>
-            <td>Table cell</td>
-            <td>Table cell</td>
+            <td className="text-center"><img src={this.props.buttonData.car_lock.img} style={{ width: 50 }}></img></td>
           </tr>
         </tbody>
       </Table>
@@ -62,3 +50,12 @@ export default class AppTable extends Component {
     );
   }
 }
+
+const mapStateToProps = (state) => {
+    return {
+      buttonData: state.buttonToggle
+    };
+};
+
+export default connect(mapStateToProps)
+(AppTable);

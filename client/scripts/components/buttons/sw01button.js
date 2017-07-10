@@ -5,11 +5,13 @@ import { runScript } from '../../actions/buttons';
 
 class SW01Button extends Component {
 
-
 	render() {
+
+		const sw_device_name = 'Dining Room Lights';
+
 		return (
 			<div>
-				<Button className={this.props.buttonData.classname} onClick={() => {this.props.runScript('http://localhost:7000/cmd?cmd=sw01'+ this.props.buttonData.cmd, this.props.buttonData.cmd, 'SW01')}}>{this.props.buttonData.name} Lights</Button>
+				<Button className={this.props.buttonData.classname} onClick={() => {this.props.runScript('http://localhost:7000/cmd?cmd=sw01'+ this.props.buttonData.cmd, this.props.buttonData.cmd, 'SW01')}}>{this.props.buttonData.name} {sw_device_name}</Button>
 			</div>
 		)
 }

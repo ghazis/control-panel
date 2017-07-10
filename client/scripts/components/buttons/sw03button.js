@@ -7,9 +7,12 @@ class SW03Button extends Component {
 
 
 	render() {
+
+		const sw_device_name = 'Heater';
+
 		return (
 			<div>
-				<Button className={this.props.buttonData.classname} onClick={() => {this.props.runScript('http://localhost:7000/cmd?cmd=sw03'+ this.props.buttonData.cmd, this.props.buttonData.cmd, 'SW03')}}>{this.props.buttonData.name} Lights</Button>
+				<Button className={this.props.buttonData.classname} onClick={() => {this.props.runScript('http://localhost:7000/cmd?cmd=sw03'+ this.props.buttonData.cmd, this.props.buttonData.cmd, 'SW03')}}>{this.props.buttonData.name} {sw_device_name}</Button>
 			</div>
 		)
 }
