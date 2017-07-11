@@ -44727,7 +44727,7 @@ var SW01Button = (function (_Component) {
 																_react2['default'].createElement(
 																				_reactBootstrap.Button,
 																				{ className: this.props.buttonData.classname, onClick: function () {
-																												_this.props.runScript('http://localhost:7000/cmd?cmd=sw01' + _this.props.buttonData.cmd, _this.props.buttonData.cmd, 'SW01');
+																												_this.props.runScript('http://73.209.181.138:7000/cmd?cmd=sw01' + _this.props.buttonData.cmd, _this.props.buttonData.cmd, 'SW01');
 																								} },
 																				this.props.buttonData.name,
 																				' ',
@@ -69667,7 +69667,7 @@ var SW02Button = (function (_Component) {
 																_react2['default'].createElement(
 																				_reactBootstrap.Button,
 																				{ className: this.props.buttonData.classname, onClick: function () {
-																												_this.props.runScript('http://localhost:7000/cmd?cmd=sw02' + _this.props.buttonData.cmd, _this.props.buttonData.cmd, 'SW02');
+																												_this.props.runScript('http://73.209.181.138:7000/cmd?cmd=sw02' + _this.props.buttonData.cmd, _this.props.buttonData.cmd, 'SW02');
 																								} },
 																				this.props.buttonData.name,
 																				' ',
@@ -69753,7 +69753,7 @@ var SW03Button = (function (_Component) {
 																_react2['default'].createElement(
 																				_reactBootstrap.Button,
 																				{ className: this.props.buttonData.classname, onClick: function () {
-																												_this.props.runScript('http://localhost:7000/cmd?cmd=sw03' + _this.props.buttonData.cmd, _this.props.buttonData.cmd, 'SW03');
+																												_this.props.runScript('http://73.209.181.138:7000/cmd?cmd=sw03' + _this.props.buttonData.cmd, _this.props.buttonData.cmd, 'SW03');
 																								} },
 																				this.props.buttonData.name,
 																				' ',
@@ -69839,7 +69839,7 @@ var SW04Button = (function (_Component) {
 																_react2['default'].createElement(
 																				_reactBootstrap.Button,
 																				{ className: this.props.buttonData.classname, onClick: function () {
-																												_this.props.runScript('http://localhost:7000/cmd?cmd=sw04' + _this.props.buttonData.cmd, _this.props.buttonData.cmd, 'SW04');
+																												_this.props.runScript('http://73.209.181.138:7000/cmd?cmd=sw04' + _this.props.buttonData.cmd, _this.props.buttonData.cmd, 'SW04');
 																								} },
 																				this.props.buttonData.name,
 																				' ',
@@ -69925,7 +69925,7 @@ var SW05Button = (function (_Component) {
 																_react2['default'].createElement(
 																				_reactBootstrap.Button,
 																				{ className: this.props.buttonData.classname, onClick: function () {
-																												_this.props.runScript('http://localhost:7000/cmd?cmd=sw05' + _this.props.buttonData.cmd, _this.props.buttonData.cmd, 'SW05');
+																												_this.props.runScript('http://73.209.181.138:7000/cmd?cmd=sw05' + _this.props.buttonData.cmd, _this.props.buttonData.cmd, 'SW05');
 																								} },
 																				this.props.buttonData.name,
 																				' ',
@@ -70009,7 +70009,7 @@ var StartCarButton = (function (_Component) {
                 _react2['default'].createElement(
                     _reactBootstrap.Button,
                     { className: this.props.buttonData.classname, onClick: function () {
-                            _this.props.runScript('http://localhost:7000/cmd?cmd=car' + _this.props.buttonData.cmd, _this.props.buttonData.cmd, 'CAR');
+                            _this.props.runScript('http://73.209.181.138:7000/cmd?cmd=car' + _this.props.buttonData.cmd, _this.props.buttonData.cmd, 'CAR');
                         } },
                     this.props.buttonData.name
                 )
@@ -70091,7 +70091,7 @@ var LockCarButton = (function (_Component) {
                 _react2['default'].createElement(
                     _reactBootstrap.Button,
                     { className: this.props.buttonData.classname, onClick: function () {
-                            _this.props.runScript('http://localhost:7000/cmd?cmd=lock' + _this.props.buttonData.cmd, _this.props.buttonData.cmd, 'CAR_LOCK');
+                            _this.props.runScript('http://73.209.181.138:7000/cmd?cmd=lock' + _this.props.buttonData.cmd, _this.props.buttonData.cmd, 'CAR_LOCK');
                         } },
                     this.props.buttonData.name
                 )

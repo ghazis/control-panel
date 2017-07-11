@@ -9,7 +9,7 @@ class LockCarButton extends Component {
 	render() {
 		return (
 			<div>
-				<Button className={this.props.buttonData.classname} onClick={() => {this.props.runScript('http://localhost:7000/cmd?cmd=lock'+ this.props.buttonData.cmd, this.props.buttonData.cmd, 'CAR_LOCK')}}>{this.props.buttonData.name}</Button>
+				<Button className={this.props.buttonData.classname} onClick={() => {this.props.runScript('http://73.209.181.138:7000/cmd?cmd=lock'+ this.props.buttonData.cmd, this.props.buttonData.cmd, 'CAR_LOCK')}}>{this.props.buttonData.name}</Button>
 			</div>
 		)
 }

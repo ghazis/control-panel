@@ -12,7 +12,7 @@ class SW05Button extends Component {
 
 		return (
 			<div>
-				<Button className={this.props.buttonData.classname} onClick={() => {this.props.runScript('http://localhost:7000/cmd?cmd=sw05'+ this.props.buttonData.cmd, this.props.buttonData.cmd, 'SW05')}}>{this.props.buttonData.name} {sw_device_name}</Button>
+				<Button className={this.props.buttonData.classname} onClick={() => {this.props.runScript('http://73.209.181.138:7000/cmd?cmd=sw05'+ this.props.buttonData.cmd, this.props.buttonData.cmd, 'SW05')}}>{this.props.buttonData.name} {sw_device_name}</Button>
 			</div>
 		)
 }
