@@ -1,4 +1,4 @@
-import { InitialButtonsState, swStateOn, swStateOff, carStateOn, carStateOff, carLockStateOn, carLockStateOff } from './states';
+import { InitialButtonsState, swStateOn, swStateOff, carStateOn, carStateOff, carLockStateOn, carLockStateOff, acStateOn, acStateOff, heatStateOn, heatStateOff } from './states';
 import { fan_off, fan_on, heater_off, heater_on, tv_off, tv_on } from '../components/images';
 
 export function buttonToggle(state = InitialButtonsState, action) {
@@ -72,6 +72,28 @@ export function buttonToggle(state = InitialButtonsState, action) {
             return {
                 ...state,
                     car_lock: carLockStateOff
+            }
+        case 'BUTTON_TOGGLE_ON_AC':
+            return {
+                ...state,
+                    ac: acStateOn,
+                    heat: heatStateOff
+            }
+        case 'BUTTON_TOGGLE_OFF_AC':
+            return {
+                ...state,
+                    ac: acStateOff
+            }
+        case 'BUTTON_TOGGLE_ON_HEAT':
+            return {
+                ...state,
+                    heat: heatStateOn,
+                    ac: acStateOff
+            }
+        case 'BUTTON_TOGGLE_OFF_HEAT':
+            return {
+                ...state,
+                    heat: heatStateOff
             }
         default:
             return state;

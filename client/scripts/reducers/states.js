@@ -1,4 +1,4 @@
-import { lb_off, lb_on, fan_off, fan_on, heater_off, heater_on, tv_on, tv_off, car_off, car_on, lock_off, lock_on } from '../components/images';
+import { lb_off, lb_on, fan_off, fan_on, heater_off, heater_on, tv_on, tv_off, car_off, car_on, lock_off, lock_on, ac_off, ac_on, heat_off, heat_on } from '../components/images';
 
 export const swStateOn = {
                     name: 'Turn Off',
@@ -41,6 +41,32 @@ export const carLockStateOff = {
                     classname: 'btn-success',
                     img: lock_off
                 }
+export const acStateOn = {
+                    name: 'AC On',
+                    cmd: '_off',
+                    classname: 'btn-success',
+                    img: ac_on
+                }
+
+export const acStateOff = {
+                    name: 'AC Off',
+                    cmd: '_on',
+                    classname: 'btn-danger',
+                    img: ac_off
+                }
+export const heatStateOn = {
+                    name: 'Heat On',
+                    cmd: '_off',
+                    classname: 'btn-success',
+                    img: heat_on
+                }
+
+export const heatStateOff = {
+                    name: 'Heat Off',
+                    cmd: '_on',
+                    classname: 'btn-danger',
+                    img: heat_off
+                }                
 
 export const InitialButtonsState = {
     sw01: swStateOff,
@@ -49,5 +75,7 @@ export const InitialButtonsState = {
     sw04: swStateOff,
     sw05: { ...swStateOff, img: tv_off},
     car: carStateOff,
-    car_lock: carLockStateOff
+    car_lock: carLockStateOff,
+    ac: acStateOff,
+    heat: heatStateOff
 }
