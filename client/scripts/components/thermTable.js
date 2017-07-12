@@ -13,17 +13,17 @@ class ThermTable extends Component {
         <thead>
           <tr>
             <th>Controls</th>
-            <th className="text-center">Status</th>
+            <th>Status</th>
           </tr>
         </thead>
         <tbody>
           <tr>
             <td><AcButton /></td>
-            <td><img className="text-centerr" src={this.props.buttonData.ac.img} style={{ width: 200 }}></img></td>
+            <td><img src={this.props.buttonData.ac.img} style={{ width: 200 }}></img></td>
           </tr>
           <tr>
             <td><HeatButton /></td>
-            <td className="text-center"><img src={this.props.buttonData.heat.img} style={{ width: 50 }}></img></td>
+            <td><img src={this.props.buttonData.heat.img} style={{ width: 50 }}></img></td>
           </tr>
         </tbody>
       </Table>

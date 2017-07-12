@@ -13,37 +13,29 @@ class HomeTable extends Component {
         <thead>
           <tr>
             <th>Controls</th>
-            <th className="text-center">Status</th>
+            <th>Status</th>
           </tr>
         </thead>
         <tbody>
           <tr>
             <td><SW01 /></td>
-            <td className="text-center"><img src={this.props.buttonData.sw01.img} style={{ width: 50 }}></img></td>
+            <td><img src={this.props.buttonData.sw01.img} style={{ width: 50 }}></img></td>
           </tr>
           <tr> 
             <td><SW02 /></td>
-            <td className="text-center"><img src={this.props.buttonData.sw02.img} style={{ width: 50 }}></img></td>
+            <td><img src={this.props.buttonData.sw02.img} style={{ width: 50 }}></img></td>
           </tr>
           <tr> 
             <td><SW03 /></td>
-            <td className="text-center"><img src={this.props.buttonData.sw03.img} style={{ width: 50 }}></img></td>
+            <td><img src={this.props.buttonData.sw03.img} style={{ width: 50 }}></img></td>
           </tr>
           <tr> 
             <td><SW04 /></td>
-            <td className="text-center"><img src={this.props.buttonData.sw04.img} style={{ width: 50 }}></img></td>
+            <td><img src={this.props.buttonData.sw04.img} style={{ width: 50 }}></img></td>
           </tr>
           <tr> 
             <td><SW05 /></td>
-            <td className="text-center"><img src={this.props.buttonData.sw05.img} style={{ width: 50 }}></img></td>
-          </tr>
-          <tr>
-            <td><StartCarButton /></td>
-            <td><img className="text-centerr" src={this.props.buttonData.car.img} style={{ width: 200 }}></img></td>
-          </tr>
-          <tr>
-            <td><LockCarButton /></td>
-            <td className="text-center"><img src={this.props.buttonData.car_lock.img} style={{ width: 50 }}></img></td>
+            <td><img src={this.props.buttonData.sw05.img} style={{ width: 50 }}></img></td>
           </tr>
         </tbody>
       </Table>

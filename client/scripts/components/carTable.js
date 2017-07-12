@@ -13,17 +13,17 @@ class CarTable extends Component {
         <thead>
           <tr>
             <th>Controls</th>
-            <th className="text-center">Status</th>
+            <th>Status</th>
           </tr>
         </thead>
         <tbody>
           <tr>
             <td><StartCarButton /></td>
-            <td><img className="text-centerr" src={this.props.buttonData.car.img} style={{ width: 200 }}></img></td>
+            <td><img src={this.props.buttonData.car.img} style={{ width: 200 }}></img></td>
           </tr>
           <tr>
             <td><LockCarButton /></td>
-            <td className="text-center"><img src={this.props.buttonData.car_lock.img} style={{ width: 50 }}></img></td>
+            <td><img src={this.props.buttonData.car_lock.img} style={{ width: 50 }}></img></td>
           </tr>
         </tbody>
       </Table>
