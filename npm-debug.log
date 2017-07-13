@@ -3,7 +3,7 @@
 1 verbose cli   '/usr/local/bin/npm',
 1 verbose cli   'install',
 1 verbose cli   '--save-dev',
-1 verbose cli   'url-loader' ]
+1 verbose cli   'react-router-bootstrap' ]
 2 info using npm@2.15.0
 3 info using node@v4.4.2
 4 verbose install initial load of /Users/Ashhad/React/control_panel/package.json
@@ -42,1006 +42,236 @@
 37 verbose installManyTop reading scoped package data from /Users/Ashhad/React/control_panel/node_modules/redux-thunk/package.json
 38 verbose installManyTop reading scoped package data from /Users/Ashhad/React/control_panel/node_modules/style-loader/package.json
 39 verbose installManyTop reading scoped package data from /Users/Ashhad/React/control_panel/node_modules/symbol-observable/package.json
-40 verbose installManyTop reading scoped package data from /Users/Ashhad/React/control_panel/node_modules/webpack/package.json
-41 verbose installManyTop reading scoped package data from /Users/Ashhad/React/control_panel/node_modules/whatwg-fetch/package.json
-42 info package.json less-loader@2.2.3 No license field.
-43 info package.json materialize-css@0.96.1 No license field.
-44 verbose readDependencies loading dependencies from /Users/Ashhad/React/control_panel/package.json
-45 silly cache add args [ 'url-loader', null ]
-46 verbose cache add spec url-loader
-47 silly cache add parsed spec Result {
-47 silly cache add   raw: 'url-loader',
-47 silly cache add   scope: null,
-47 silly cache add   name: 'url-loader',
-47 silly cache add   rawSpec: '',
-47 silly cache add   spec: 'latest',
-47 silly cache add   type: 'tag' }
-48 silly addNamed url-loader@latest
-49 verbose addNamed "latest" is being treated as a dist-tag for url-loader
-50 info addNameTag [ 'url-loader', 'latest' ]
-51 silly mapToRegistry name url-loader
-52 silly mapToRegistry using default registry
-53 silly mapToRegistry registry https://registry.npmjs.org/
-54 silly mapToRegistry data Result {
-54 silly mapToRegistry   raw: 'url-loader',
-54 silly mapToRegistry   scope: null,
-54 silly mapToRegistry   name: 'url-loader',
-54 silly mapToRegistry   rawSpec: '',
-54 silly mapToRegistry   spec: 'latest',
-54 silly mapToRegistry   type: 'tag' }
-55 silly mapToRegistry uri https://registry.npmjs.org/url-loader
-56 verbose addNameTag registry:https://registry.npmjs.org/url-loader not in flight; fetching
-57 verbose request uri https://registry.npmjs.org/url-loader
-58 verbose request no auth needed
-59 info attempt registry request try #1 at 6:33:51 PM
-60 verbose request id 7682f8394061165d
-61 verbose etag W/"593fbbc1-487e"
-62 verbose lastModified Tue, 13 Jun 2017 10:17:37 GMT
-63 http request GET https://registry.npmjs.org/url-loader
-64 http 200 https://registry.npmjs.org/url-loader
-65 verbose headers { server: 'nginx/1.10.1',
-65 verbose headers   'content-type': 'application/json',
-65 verbose headers   'last-modified': 'Tue, 04 Jul 2017 16:38:13 GMT',
-65 verbose headers   etag: 'W/"595bc475-486a"',
-65 verbose headers   'content-encoding': 'gzip',
-65 verbose headers   'cache-control': 'max-age=300',
-65 verbose headers   'content-length': '3832',
-65 verbose headers   'accept-ranges': 'bytes',
-65 verbose headers   date: 'Fri, 07 Jul 2017 23:33:51 GMT',
-65 verbose headers   via: '1.1 varnish',
-65 verbose headers   age: '0',
-65 verbose headers   connection: 'keep-alive',
-65 verbose headers   'x-served-by': 'cache-ord1720-ORD',
-65 verbose headers   'x-cache': 'HIT',
-65 verbose headers   'x-cache-hits': '1',
-65 verbose headers   'x-timer': 'S1499470432.867973,VS0,VE20',
-65 verbose headers   vary: 'Accept-Encoding' }
-66 silly get cb [ 200,
-66 silly get   { server: 'nginx/1.10.1',
-66 silly get     'content-type': 'application/json',
-66 silly get     'last-modified': 'Tue, 04 Jul 2017 16:38:13 GMT',
-66 silly get     etag: 'W/"595bc475-486a"',
-66 silly get     'content-encoding': 'gzip',
-66 silly get     'cache-control': 'max-age=300',
-66 silly get     'content-length': '3832',
-66 silly get     'accept-ranges': 'bytes',
-66 silly get     date: 'Fri, 07 Jul 2017 23:33:51 GMT',
-66 silly get     via: '1.1 varnish',
-66 silly get     age: '0',
-66 silly get     connection: 'keep-alive',
-66 silly get     'x-served-by': 'cache-ord1720-ORD',
-66 silly get     'x-cache': 'HIT',
-66 silly get     'x-cache-hits': '1',
-66 silly get     'x-timer': 'S1499470432.867973,VS0,VE20',
-66 silly get     vary: 'Accept-Encoding' } ]
-67 verbose get saving url-loader to /Users/Ashhad/.npm/registry.npmjs.org/url-loader/.cache.json
-68 verbose correctMkdir /Users/Ashhad/.npm correctMkdir not in flight; initializing
-69 silly addNameTag next cb for url-loader with tag latest
-70 silly addNamed url-loader@0.5.9
-71 verbose addNamed "0.5.9" is a plain semver version for url-loader
-72 silly cache afterAdd url-loader@0.5.9
-73 verbose afterAdd /Users/Ashhad/.npm/url-loader/0.5.9/package/package.json not in flight; writing
-74 verbose correctMkdir /Users/Ashhad/.npm correctMkdir not in flight; initializing
-75 verbose afterAdd /Users/Ashhad/.npm/url-loader/0.5.9/package/package.json written
-76 silly install resolved [ { name: 'url-loader',
-76 silly install resolved     version: '0.5.9',
-76 silly install resolved     author: { name: 'Tobias Koppers @sokra' },
-76 silly install resolved     description: 'url loader module for webpack',
-76 silly install resolved     license: 'MIT',
-76 silly install resolved     scripts: { release: 'standard-version' },
-76 silly install resolved     dependencies: { 'loader-utils': '^1.0.2', mime: '1.3.x' },
-76 silly install resolved     devDependencies: { 'standard-version': '^4.0.0' },
-76 silly install resolved     peerDependencies: { 'file-loader': '*' },
-76 silly install resolved     repository:
-76 silly install resolved      { type: 'git',
-76 silly install resolved        url: 'git+ssh://git@github.com/webpack/url-loader.git' },
-76 silly install resolved     gitHead: '5574ed3ec10c71440f6de32f0abcd5d2609ffb79',
-76 silly install resolved     bugs: { url: 'https://github.com/webpack/url-loader/issues' },
-76 silly install resolved     homepage: 'https://github.com/webpack/url-loader#readme',
-76 silly install resolved     _id: 'url-loader@0.5.9',
-76 silly install resolved     _npmVersion: '5.0.2',
-76 silly install resolved     _nodeVersion: '8.0.0',
-76 silly install resolved     _npmUser: { name: 'd3viant0ne', email: 'wiens.joshua@gmail.com' },
-76 silly install resolved     dist:
-76 silly install resolved      { integrity: 'sha512-B7QYFyvv+fOBqBVeefsxv6koWWtjmHaMFT6KZWti4KRw8YUD/hOU+3AECvXuzyVawIBx3z7zQRejXCDSO5kk1Q==',
-76 silly install resolved        shasum: 'cc8fea82c7b906e7777019250869e569e995c295',
-76 silly install resolved        tarball: 'https://registry.npmjs.org/url-loader/-/url-loader-0.5.9.tgz' },
-76 silly install resolved     maintainers:
-76 silly install resolved      [ [Object],
-76 silly install resolved        [Object],
-76 silly install resolved        [Object],
-76 silly install resolved        [Object],
-76 silly install resolved        [Object],
-76 silly install resolved        [Object],
-76 silly install resolved        [Object] ],
-76 silly install resolved     _npmOperationalInternal:
-76 silly install resolved      { host: 's3://npm-registry-packages',
-76 silly install resolved        tmp: 'tmp/url-loader-0.5.9.tgz_1497285188669_0.9403480282053351' },
-76 silly install resolved     directories: {},
-76 silly install resolved     _shasum: 'cc8fea82c7b906e7777019250869e569e995c295',
-76 silly install resolved     _resolved: 'https://registry.npmjs.org/url-loader/-/url-loader-0.5.9.tgz',
-76 silly install resolved     _from: 'url-loader@latest',
-76 silly install resolved     readme: 'ERROR: No README data found!' } ]
-77 info install url-loader@0.5.9 into /Users/Ashhad/React/control_panel
-78 info installOne url-loader@0.5.9
-79 verbose installOne of url-loader to /Users/Ashhad/React/control_panel not in flight; installing
-80 verbose correctMkdir /Users/Ashhad/.npm/_locks correctMkdir not in flight; initializing
-81 verbose lock using /Users/Ashhad/.npm/_locks/url-loader-c15d664e21b1afa0.lock for /Users/Ashhad/React/control_panel/node_modules/url-loader
-82 silly install write writing url-loader 0.5.9 to /Users/Ashhad/React/control_panel/node_modules/url-loader
-83 verbose unbuild node_modules/url-loader
-84 silly gentlyRm /Users/Ashhad/React/control_panel/node_modules/url-loader is being purged from base /Users/Ashhad/React/control_panel
-85 verbose gentlyRm don't care about contents; nuking /Users/Ashhad/React/control_panel/node_modules/url-loader
-86 verbose tar unpack /Users/Ashhad/.npm/url-loader/0.5.9/package.tgz
-87 verbose tar unpacking to /Users/Ashhad/React/control_panel/node_modules/url-loader
-88 silly gentlyRm /Users/Ashhad/React/control_panel/node_modules/url-loader is being purged
-89 verbose gentlyRm don't care about contents; nuking /Users/Ashhad/React/control_panel/node_modules/url-loader
-90 silly gunzTarPerm modes [ '755', '644' ]
-91 silly gunzTarPerm extractEntry package.json
-92 silly gunzTarPerm extractEntry .npmignore
-93 silly gunzTarPerm extractEntry README.md
-94 silly gunzTarPerm extractEntry LICENSE
-95 silly gunzTarPerm extractEntry index.js
-96 silly gunzTarPerm extractEntry .github/ISSUE_TEMPLATE.md
-97 silly gunzTarPerm extractEntry .github/PULL_REQUEST_TEMPLATE.md
-98 silly gunzTarPerm extractEntry CHANGELOG.md
-99 verbose write writing to /Users/Ashhad/React/control_panel/node_modules/url-loader/package.json
-100 info preinstall url-loader@0.5.9
-101 verbose readDependencies loading dependencies from /Users/Ashhad/React/control_panel/node_modules/url-loader/package.json
-102 silly prepareForInstallMany adding loader-utils@^1.0.2 from url-loader dependencies
-103 silly prepareForInstallMany adding mime@1.3.x from url-loader dependencies
-104 verbose readDependencies loading dependencies from /Users/Ashhad/React/control_panel/node_modules/url-loader/package.json
-105 silly cache add args [ 'loader-utils@^1.0.2', null ]
-106 verbose cache add spec loader-utils@^1.0.2
-107 silly cache add args [ 'mime@1.3.x', null ]
-108 verbose cache add spec mime@1.3.x
-109 silly cache add parsed spec Result {
-109 silly cache add   raw: 'loader-utils@^1.0.2',
-109 silly cache add   scope: null,
-109 silly cache add   name: 'loader-utils',
-109 silly cache add   rawSpec: '^1.0.2',
-109 silly cache add   spec: '>=1.0.2 <2.0.0',
-109 silly cache add   type: 'range' }
-110 silly addNamed loader-utils@>=1.0.2 <2.0.0
-111 verbose addNamed ">=1.0.2 <2.0.0" is a valid semver range for loader-utils
-112 silly addNameRange { name: 'loader-utils', range: '>=1.0.2 <2.0.0', hasData: false }
-113 silly mapToRegistry name loader-utils
-114 silly mapToRegistry using default registry
-115 silly mapToRegistry registry https://registry.npmjs.org/
-116 silly mapToRegistry data Result {
-116 silly mapToRegistry   raw: 'loader-utils',
-116 silly mapToRegistry   scope: null,
-116 silly mapToRegistry   name: 'loader-utils',
-116 silly mapToRegistry   rawSpec: '',
-116 silly mapToRegistry   spec: 'latest',
-116 silly mapToRegistry   type: 'tag' }
-117 silly mapToRegistry uri https://registry.npmjs.org/loader-utils
-118 verbose addNameRange registry:https://registry.npmjs.org/loader-utils not in flight; fetching
-119 silly cache add parsed spec Result {
-119 silly cache add   raw: 'mime@1.3.x',
-119 silly cache add   scope: null,
-119 silly cache add   name: 'mime',
-119 silly cache add   rawSpec: '1.3.x',
-119 silly cache add   spec: '>=1.3.0 <1.4.0',
-119 silly cache add   type: 'range' }
-120 silly addNamed mime@>=1.3.0 <1.4.0
-121 verbose addNamed ">=1.3.0 <1.4.0" is a valid semver range for mime
-122 silly addNameRange { name: 'mime', range: '>=1.3.0 <1.4.0', hasData: false }
-123 silly mapToRegistry name mime
-124 silly mapToRegistry using default registry
-125 silly mapToRegistry registry https://registry.npmjs.org/
-126 silly mapToRegistry data Result {
-126 silly mapToRegistry   raw: 'mime',
-126 silly mapToRegistry   scope: null,
-126 silly mapToRegistry   name: 'mime',
-126 silly mapToRegistry   rawSpec: '',
-126 silly mapToRegistry   spec: 'latest',
-126 silly mapToRegistry   type: 'tag' }
-127 silly mapToRegistry uri https://registry.npmjs.org/mime
-128 verbose addNameRange registry:https://registry.npmjs.org/mime not in flight; fetching
-129 verbose request uri https://registry.npmjs.org/loader-utils
-130 verbose request no auth needed
-131 info attempt registry request try #1 at 6:33:51 PM
-132 verbose etag W/"5918d3ea-a328"
-133 verbose lastModified Sun, 14 May 2017 22:02:18 GMT
-134 http request GET https://registry.npmjs.org/loader-utils
-135 verbose request uri https://registry.npmjs.org/mime
-136 verbose request no auth needed
-137 info attempt registry request try #1 at 6:33:51 PM
-138 verbose etag W/"595ec48d-5cc0"
-139 verbose lastModified Thu, 06 Jul 2017 23:15:25 GMT
-140 http request GET https://registry.npmjs.org/mime
-141 http 304 https://registry.npmjs.org/loader-utils
-142 verbose headers { date: 'Fri, 07 Jul 2017 23:33:51 GMT',
-142 verbose headers   via: '1.1 varnish',
-142 verbose headers   'cache-control': 'max-age=300',
-142 verbose headers   etag: 'W/"5918d3ea-a328"',
-142 verbose headers   age: '211',
-142 verbose headers   connection: 'keep-alive',
-142 verbose headers   'x-served-by': 'cache-ord1720-ORD',
-142 verbose headers   'x-cache': 'HIT',
-142 verbose headers   'x-cache-hits': '5',
-142 verbose headers   'x-timer': 'S1499470432.993947,VS0,VE0',
-142 verbose headers   vary: 'Accept-Encoding' }
-143 silly get cb [ 304,
-143 silly get   { date: 'Fri, 07 Jul 2017 23:33:51 GMT',
-143 silly get     via: '1.1 varnish',
-143 silly get     'cache-control': 'max-age=300',
-143 silly get     etag: 'W/"5918d3ea-a328"',
-143 silly get     age: '211',
-143 silly get     connection: 'keep-alive',
-143 silly get     'x-served-by': 'cache-ord1720-ORD',
-143 silly get     'x-cache': 'HIT',
-143 silly get     'x-cache-hits': '5',
-143 silly get     'x-timer': 'S1499470432.993947,VS0,VE0',
-143 silly get     vary: 'Accept-Encoding' } ]
-144 verbose etag https://registry.npmjs.org/loader-utils from cache
-145 verbose get saving loader-utils to /Users/Ashhad/.npm/registry.npmjs.org/loader-utils/.cache.json
-146 verbose correctMkdir /Users/Ashhad/.npm correctMkdir not in flight; initializing
-147 silly addNameRange number 2 { name: 'loader-utils', range: '>=1.0.2 <2.0.0', hasData: true }
-148 silly addNameRange versions [ 'loader-utils',
-148 silly addNameRange   [ '0.1.0',
-148 silly addNameRange     '0.1.1',
-148 silly addNameRange     '0.1.2',
-148 silly addNameRange     '0.2.0',
-148 silly addNameRange     '0.2.1',
-148 silly addNameRange     '0.2.2',
-148 silly addNameRange     '0.2.3',
-148 silly addNameRange     '0.2.4',
-148 silly addNameRange     '0.2.5',
-148 silly addNameRange     '0.2.6',
-148 silly addNameRange     '0.2.7',
-148 silly addNameRange     '0.2.8',
-148 silly addNameRange     '0.2.9',
-148 silly addNameRange     '0.2.10',
-148 silly addNameRange     '0.2.11',
-148 silly addNameRange     '0.2.12',
-148 silly addNameRange     '0.2.13',
-148 silly addNameRange     '0.2.14',
-148 silly addNameRange     '0.2.15',
-148 silly addNameRange     '0.2.16',
-148 silly addNameRange     '0.2.17',
-148 silly addNameRange     '1.0.0',
-148 silly addNameRange     '1.0.1',
-148 silly addNameRange     '1.0.2',
-148 silly addNameRange     '1.0.3',
-148 silly addNameRange     '1.0.4',
-148 silly addNameRange     '1.1.0' ] ]
-149 silly addNamed loader-utils@1.1.0
-150 verbose addNamed "1.1.0" is a plain semver version for loader-utils
-151 silly cache afterAdd loader-utils@1.1.0
-152 verbose afterAdd /Users/Ashhad/.npm/loader-utils/1.1.0/package/package.json not in flight; writing
-153 verbose correctMkdir /Users/Ashhad/.npm correctMkdir not in flight; initializing
-154 verbose afterAdd /Users/Ashhad/.npm/loader-utils/1.1.0/package/package.json written
-155 http 304 https://registry.npmjs.org/mime
-156 verbose headers { date: 'Fri, 07 Jul 2017 23:33:52 GMT',
-156 verbose headers   via: '1.1 varnish',
-156 verbose headers   'cache-control': 'max-age=300',
-156 verbose headers   etag: 'W/"595ec48d-5cc0"',
-156 verbose headers   age: '18',
-156 verbose headers   connection: 'keep-alive',
-156 verbose headers   'x-served-by': 'cache-ord1737-ORD',
-156 verbose headers   'x-cache': 'HIT',
-156 verbose headers   'x-cache-hits': '2',
-156 verbose headers   'x-timer': 'S1499470432.037232,VS0,VE0',
-156 verbose headers   vary: 'Accept-Encoding' }
-157 silly get cb [ 304,
-157 silly get   { date: 'Fri, 07 Jul 2017 23:33:52 GMT',
-157 silly get     via: '1.1 varnish',
-157 silly get     'cache-control': 'max-age=300',
-157 silly get     etag: 'W/"595ec48d-5cc0"',
-157 silly get     age: '18',
-157 silly get     connection: 'keep-alive',
-157 silly get     'x-served-by': 'cache-ord1737-ORD',
-157 silly get     'x-cache': 'HIT',
-157 silly get     'x-cache-hits': '2',
-157 silly get     'x-timer': 'S1499470432.037232,VS0,VE0',
-157 silly get     vary: 'Accept-Encoding' } ]
-158 verbose etag https://registry.npmjs.org/mime from cache
-159 verbose get saving mime to /Users/Ashhad/.npm/registry.npmjs.org/mime/.cache.json
-160 verbose correctMkdir /Users/Ashhad/.npm correctMkdir not in flight; initializing
-161 silly addNameRange number 2 { name: 'mime', range: '>=1.3.0 <1.4.0', hasData: true }
-162 silly addNameRange versions [ 'mime',
-162 silly addNameRange   [ '1.0.0',
-162 silly addNameRange     '1.1.0',
-162 silly addNameRange     '1.2.1',
-162 silly addNameRange     '1.2.2',
-162 silly addNameRange     '1.2.3',
-162 silly addNameRange     '1.2.4',
-162 silly addNameRange     '1.2.5',
-162 silly addNameRange     '1.2.6',
-162 silly addNameRange     '1.2.7',
-162 silly addNameRange     '1.2.8',
-162 silly addNameRange     '1.2.9',
-162 silly addNameRange     '1.2.10',
-162 silly addNameRange     '1.2.11',
-162 silly addNameRange     '1.3.0',
-162 silly addNameRange     '1.3.2',
-162 silly addNameRange     '1.3.3',
-162 silly addNameRange     '1.3.4',
-162 silly addNameRange     '1.3.5',
-162 silly addNameRange     '1.3.6' ] ]
-163 silly addNamed mime@1.3.6
-164 verbose addNamed "1.3.6" is a plain semver version for mime
-165 silly cache afterAdd mime@1.3.6
-166 verbose afterAdd /Users/Ashhad/.npm/mime/1.3.6/package/package.json not in flight; writing
-167 verbose correctMkdir /Users/Ashhad/.npm correctMkdir not in flight; initializing
-168 verbose afterAdd /Users/Ashhad/.npm/mime/1.3.6/package/package.json written
-169 silly install resolved [ { name: 'loader-utils',
-169 silly install resolved     version: '1.1.0',
-169 silly install resolved     author: { name: 'Tobias Koppers @sokra' },
-169 silly install resolved     description: 'utils for webpack loaders',
-169 silly install resolved     dependencies: { 'big.js': '^3.1.3', 'emojis-list': '^2.0.0', json5: '^0.5.0' },
-169 silly install resolved     scripts:
-169 silly install resolved      { test: 'mocha',
-169 silly install resolved        posttest: 'npm run lint',
-169 silly install resolved        lint: 'eslint lib test',
-169 silly install resolved        travis: 'npm run cover -- --report lcovonly',
-169 silly install resolved        cover: 'istanbul cover -x *.runtime.js node_modules/mocha/bin/_mocha',
-169 silly install resolved        release: 'npm test && standard-version' },
-169 silly install resolved     license: 'MIT',
-169 silly install resolved     repository:
-169 silly install resolved      { type: 'git',
-169 silly install resolved        url: 'git+https://github.com/webpack/loader-utils.git' },
-169 silly install resolved     engines: { node: '>=4.0.0' },
-169 silly install resolved     devDependencies:
-169 silly install resolved      { coveralls: '^2.11.2',
-169 silly install resolved        eslint: '^3.15.0',
-169 silly install resolved        'eslint-plugin-node': '^4.0.1',
-169 silly install resolved        istanbul: '^0.3.14',
-169 silly install resolved        mocha: '^1.21.4',
-169 silly install resolved        'standard-version': '^4.0.0' },
-169 silly install resolved     main: 'lib/index.js',
-169 silly install resolved     files: [ 'lib' ],
-169 silly install resolved     gitHead: 'a5602addda0c5e98e70d067b8dd050d5e4153f1d',
-169 silly install resolved     bugs: { url: 'https://github.com/webpack/loader-utils/issues' },
-169 silly install resolved     homepage: 'https://github.com/webpack/loader-utils#readme',
-169 silly install resolved     _id: 'loader-utils@1.1.0',
-169 silly install resolved     _shasum: 'c98aef488bcceda2ffb5e2de646d6a754429f5cd',
-169 silly install resolved     _from: 'loader-utils@>=1.0.2 <2.0.0',
-169 silly install resolved     _npmVersion: '4.1.2',
-169 silly install resolved     _nodeVersion: '7.7.3',
-169 silly install resolved     _npmUser: { name: 'jhnns', email: 'mail@johannesewald.de' },
-169 silly install resolved     dist:
-169 silly install resolved      { shasum: 'c98aef488bcceda2ffb5e2de646d6a754429f5cd',
-169 silly install resolved        tarball: 'https://registry.npmjs.org/loader-utils/-/loader-utils-1.1.0.tgz' },
-169 silly install resolved     maintainers: [ [Object], [Object] ],
-169 silly install resolved     _npmOperationalInternal:
-169 silly install resolved      { host: 'packages-12-west.internal.npmjs.com',
-169 silly install resolved        tmp: 'tmp/loader-utils-1.1.0.tgz_1489673126296_0.2887681087013334' },
-169 silly install resolved     directories: {},
-169 silly install resolved     _resolved: 'https://registry.npmjs.org/loader-utils/-/loader-utils-1.1.0.tgz',
-169 silly install resolved     readme: 'ERROR: No README data found!' },
-169 silly install resolved   { author:
-169 silly install resolved      { name: 'Robert Kieffer',
-169 silly install resolved        email: 'robert@broofa.com',
-169 silly install resolved        url: 'http://github.com/broofa' },
-169 silly install resolved     bin: { mime: 'cli.js' },
-169 silly install resolved     contributors: [ [Object] ],
-169 silly install resolved     description: 'A comprehensive library for mime-type mapping',
-169 silly install resolved     license: 'MIT',
-169 silly install resolved     dependencies: {},
-169 silly install resolved     devDependencies: { 'mime-db': '^1.22.0' },
-169 silly install resolved     scripts:
-169 silly install resolved      { prepublish: 'node build/build.js > types.json',
-169 silly install resolved        test: 'node build/test.js' },
-169 silly install resolved     keywords: [ 'util', 'mime' ],
-169 silly install resolved     main: 'mime.js',
-169 silly install resolved     name: 'mime',
-169 silly install resolved     repository:
-169 silly install resolved      { url: 'git+https://github.com/broofa/node-mime.git',
-169 silly install resolved        type: 'git' },
-169 silly install resolved     version: '1.3.6',
-169 silly install resolved     gitHead: '78aa9df74925ee629b9f2c35ec16b099189e9cef',
-169 silly install resolved     bugs: { url: 'https://github.com/broofa/node-mime/issues' },
-169 silly install resolved     homepage: 'https://github.com/broofa/node-mime#readme',
-169 silly install resolved     _id: 'mime@1.3.6',
-169 silly install resolved     _shasum: '591d84d3653a6b0b4a3b9df8de5aa8108e72e5e0',
-169 silly install resolved     _from: 'mime@>=1.3.0 <1.4.0',
-169 silly install resolved     _npmVersion: '4.3.0',
-169 silly install resolved     _nodeVersion: '6.9.2',
-169 silly install resolved     _npmUser: { name: 'broofa', email: 'robert@broofa.com' },
-169 silly install resolved     maintainers: [ [Object], [Object] ],
-169 silly install resolved     dist:
-169 silly install resolved      { shasum: '591d84d3653a6b0b4a3b9df8de5aa8108e72e5e0',
-169 silly install resolved        tarball: 'https://registry.npmjs.org/mime/-/mime-1.3.6.tgz' },
-169 silly install resolved     _npmOperationalInternal:
-169 silly install resolved      { host: 'packages-18-east.internal.npmjs.com',
-169 silly install resolved        tmp: 'tmp/mime-1.3.6.tgz_1494565179088_0.4127067362423986' },
-169 silly install resolved     directories: {},
-169 silly install resolved     _resolved: 'https://registry.npmjs.org/mime/-/mime-1.3.6.tgz',
-169 silly install resolved     readme: 'ERROR: No README data found!' } ]
-170 info install loader-utils@1.1.0 into /Users/Ashhad/React/control_panel/node_modules/url-loader
-171 info install mime@1.3.6 into /Users/Ashhad/React/control_panel/node_modules/url-loader
-172 info installOne loader-utils@1.1.0
-173 verbose installOne of loader-utils to /Users/Ashhad/React/control_panel/node_modules/url-loader not in flight; installing
-174 verbose correctMkdir /Users/Ashhad/.npm/_locks correctMkdir not in flight; initializing
-175 info installOne mime@1.3.6
-176 verbose installOne of mime to /Users/Ashhad/React/control_panel/node_modules/url-loader not in flight; installing
-177 verbose correctMkdir /Users/Ashhad/.npm/_locks correctMkdir not in flight; initializing
-178 verbose lock using /Users/Ashhad/.npm/_locks/loader-utils-23aa74ce81b5d9f7.lock for /Users/Ashhad/React/control_panel/node_modules/url-loader/node_modules/loader-utils
-179 silly install write writing loader-utils 1.1.0 to /Users/Ashhad/React/control_panel/node_modules/url-loader/node_modules/loader-utils
-180 verbose lock using /Users/Ashhad/.npm/_locks/mime-ac2fdd09034af1e5.lock for /Users/Ashhad/React/control_panel/node_modules/url-loader/node_modules/mime
-181 silly install write writing mime 1.3.6 to /Users/Ashhad/React/control_panel/node_modules/url-loader/node_modules/mime
-182 verbose unbuild node_modules/url-loader/node_modules/loader-utils
-183 silly gentlyRm /Users/Ashhad/React/control_panel/node_modules/url-loader/node_modules/loader-utils is being purged from base /Users/Ashhad/React/control_panel
-184 verbose gentlyRm don't care about contents; nuking /Users/Ashhad/React/control_panel/node_modules/url-loader/node_modules/loader-utils
-185 verbose tar unpack /Users/Ashhad/.npm/loader-utils/1.1.0/package.tgz
-186 verbose tar unpacking to /Users/Ashhad/React/control_panel/node_modules/url-loader/node_modules/loader-utils
-187 silly gentlyRm /Users/Ashhad/React/control_panel/node_modules/url-loader/node_modules/loader-utils is being purged
-188 verbose gentlyRm don't care about contents; nuking /Users/Ashhad/React/control_panel/node_modules/url-loader/node_modules/loader-utils
-189 silly gunzTarPerm modes [ '755', '644' ]
-190 verbose unbuild node_modules/url-loader/node_modules/mime
-191 silly gentlyRm /Users/Ashhad/React/control_panel/node_modules/url-loader/node_modules/mime is being purged from base /Users/Ashhad/React/control_panel
-192 verbose gentlyRm don't care about contents; nuking /Users/Ashhad/React/control_panel/node_modules/url-loader/node_modules/mime
-193 verbose tar unpack /Users/Ashhad/.npm/mime/1.3.6/package.tgz
-194 verbose tar unpacking to /Users/Ashhad/React/control_panel/node_modules/url-loader/node_modules/mime
-195 silly gentlyRm /Users/Ashhad/React/control_panel/node_modules/url-loader/node_modules/mime is being purged
-196 verbose gentlyRm don't care about contents; nuking /Users/Ashhad/React/control_panel/node_modules/url-loader/node_modules/mime
-197 silly gunzTarPerm modes [ '755', '644' ]
-198 silly gunzTarPerm extractEntry package.json
-199 silly gunzTarPerm extractEntry package.json
-200 silly gunzTarPerm extractEntry README.md
-201 silly gunzTarPerm extractEntry LICENSE
-202 silly gunzTarPerm extractEntry .npmignore
-203 silly gunzTarPerm extractEntry README.md
-204 silly gunzTarPerm extractEntry CHANGELOG.md
-205 silly gunzTarPerm extractEntry lib/getCurrentRequest.js
-206 silly gunzTarPerm extractEntry LICENSE
-207 silly gunzTarPerm extractEntry cli.js
-208 silly gunzTarPerm extractEntry lib/getOptions.js
-209 silly gunzTarPerm extractEntry lib/getRemainingRequest.js
-210 silly gunzTarPerm extractEntry lib/index.js
-211 silly gunzTarPerm extractEntry lib/getHashDigest.js
-212 silly gunzTarPerm extractEntry lib/isUrlRequest.js
-213 silly gunzTarPerm extractEntry lib/parseQuery.js
-214 silly gunzTarPerm extractEntry lib/parseString.js
-215 silly gunzTarPerm extractEntry lib/stringifyRequest.js
-216 silly gunzTarPerm extractEntry lib/urlToRequest.js
-217 silly gunzTarPerm extractEntry lib/interpolateName.js
-218 silly gunzTarPerm extractEntry mime.js
-219 silly gunzTarPerm extractEntry build/build.js
-220 silly gunzTarPerm extractEntry build/test.js
-221 silly gunzTarPerm extractEntry types.json
-222 verbose write writing to /Users/Ashhad/React/control_panel/node_modules/url-loader/node_modules/mime/package.json
-223 info preinstall mime@1.3.6
-224 verbose readDependencies loading dependencies from /Users/Ashhad/React/control_panel/node_modules/url-loader/node_modules/mime/package.json
-225 verbose readDependencies loading dependencies from /Users/Ashhad/React/control_panel/node_modules/url-loader/node_modules/mime/package.json
-226 silly install resolved []
-227 verbose about to build /Users/Ashhad/React/control_panel/node_modules/url-loader/node_modules/mime
-228 info build /Users/Ashhad/React/control_panel/node_modules/url-loader/node_modules/mime
-229 info linkStuff mime@1.3.6
-230 silly linkStuff mime@1.3.6 has /Users/Ashhad/React/control_panel/node_modules/url-loader/node_modules as its parent node_modules
-231 verbose linkBins mime@1.3.6
-232 verbose link bins [ { mime: 'cli.js' },
-232 verbose link bins   '/Users/Ashhad/React/control_panel/node_modules/url-loader/node_modules/.bin',
-232 verbose link bins   false ]
-233 verbose linkMans mime@1.3.6
-234 verbose rebuildBundles mime@1.3.6
-235 silly gentlyRm /Users/Ashhad/React/control_panel/node_modules/url-loader/node_modules/.bin/mime is being purged
-236 verbose gentlyRm don't care about contents; nuking /Users/Ashhad/React/control_panel/node_modules/url-loader/node_modules/.bin/mime
-237 info install mime@1.3.6
-238 info postinstall mime@1.3.6
-239 verbose write writing to /Users/Ashhad/React/control_panel/node_modules/url-loader/node_modules/loader-utils/package.json
-240 verbose unlock done using /Users/Ashhad/.npm/_locks/mime-ac2fdd09034af1e5.lock for /Users/Ashhad/React/control_panel/node_modules/url-loader/node_modules/mime
-241 info preinstall loader-utils@1.1.0
-242 verbose readDependencies loading dependencies from /Users/Ashhad/React/control_panel/node_modules/url-loader/node_modules/loader-utils/package.json
-243 silly prepareForInstallMany adding big.js@^3.1.3 from loader-utils dependencies
-244 silly prepareForInstallMany adding emojis-list@^2.0.0 from loader-utils dependencies
-245 silly prepareForInstallMany adding json5@^0.5.0 from loader-utils dependencies
-246 verbose readDependencies loading dependencies from /Users/Ashhad/React/control_panel/node_modules/url-loader/node_modules/loader-utils/package.json
-247 silly cache add args [ 'big.js@^3.1.3', null ]
-248 verbose cache add spec big.js@^3.1.3
-249 silly cache add args [ 'emojis-list@^2.0.0', null ]
-250 verbose cache add spec emojis-list@^2.0.0
-251 silly cache add parsed spec Result {
-251 silly cache add   raw: 'big.js@^3.1.3',
-251 silly cache add   scope: null,
-251 silly cache add   name: 'big.js',
-251 silly cache add   rawSpec: '^3.1.3',
-251 silly cache add   spec: '>=3.1.3 <4.0.0',
-251 silly cache add   type: 'range' }
-252 silly addNamed big.js@>=3.1.3 <4.0.0
-253 verbose addNamed ">=3.1.3 <4.0.0" is a valid semver range for big.js
-254 silly addNameRange { name: 'big.js', range: '>=3.1.3 <4.0.0', hasData: false }
-255 silly mapToRegistry name big.js
-256 silly mapToRegistry using default registry
-257 silly mapToRegistry registry https://registry.npmjs.org/
-258 silly mapToRegistry data Result {
-258 silly mapToRegistry   raw: 'big.js',
-258 silly mapToRegistry   scope: null,
-258 silly mapToRegistry   name: 'big.js',
-258 silly mapToRegistry   rawSpec: '',
-258 silly mapToRegistry   spec: 'latest',
-258 silly mapToRegistry   type: 'tag' }
-259 silly mapToRegistry uri https://registry.npmjs.org/big.js
-260 verbose addNameRange registry:https://registry.npmjs.org/big.js not in flight; fetching
-261 silly cache add parsed spec Result {
-261 silly cache add   raw: 'emojis-list@^2.0.0',
-261 silly cache add   scope: null,
-261 silly cache add   name: 'emojis-list',
-261 silly cache add   rawSpec: '^2.0.0',
-261 silly cache add   spec: '>=2.0.0 <3.0.0',
-261 silly cache add   type: 'range' }
-262 silly addNamed emojis-list@>=2.0.0 <3.0.0
-263 verbose addNamed ">=2.0.0 <3.0.0" is a valid semver range for emojis-list
-264 silly addNameRange { name: 'emojis-list', range: '>=2.0.0 <3.0.0', hasData: false }
-265 silly mapToRegistry name emojis-list
-266 silly mapToRegistry using default registry
-267 silly mapToRegistry registry https://registry.npmjs.org/
-268 silly mapToRegistry data Result {
-268 silly mapToRegistry   raw: 'emojis-list',
-268 silly mapToRegistry   scope: null,
-268 silly mapToRegistry   name: 'emojis-list',
-268 silly mapToRegistry   rawSpec: '',
-268 silly mapToRegistry   spec: 'latest',
-268 silly mapToRegistry   type: 'tag' }
-269 silly mapToRegistry uri https://registry.npmjs.org/emojis-list
-270 verbose addNameRange registry:https://registry.npmjs.org/emojis-list not in flight; fetching
-271 silly cache add args [ 'json5@^0.5.0', null ]
-272 verbose cache add spec json5@^0.5.0
-273 silly cache add parsed spec Result {
-273 silly cache add   raw: 'json5@^0.5.0',
-273 silly cache add   scope: null,
-273 silly cache add   name: 'json5',
-273 silly cache add   rawSpec: '^0.5.0',
-273 silly cache add   spec: '>=0.5.0 <0.6.0',
-273 silly cache add   type: 'range' }
-274 silly addNamed json5@>=0.5.0 <0.6.0
-275 verbose addNamed ">=0.5.0 <0.6.0" is a valid semver range for json5
-276 silly addNameRange { name: 'json5', range: '>=0.5.0 <0.6.0', hasData: false }
-277 silly mapToRegistry name json5
-278 silly mapToRegistry using default registry
-279 silly mapToRegistry registry https://registry.npmjs.org/
-280 silly mapToRegistry data Result {
-280 silly mapToRegistry   raw: 'json5',
-280 silly mapToRegistry   scope: null,
-280 silly mapToRegistry   name: 'json5',
-280 silly mapToRegistry   rawSpec: '',
-280 silly mapToRegistry   spec: 'latest',
-280 silly mapToRegistry   type: 'tag' }
-281 silly mapToRegistry uri https://registry.npmjs.org/json5
-282 verbose addNameRange registry:https://registry.npmjs.org/json5 not in flight; fetching
-283 verbose request uri https://registry.npmjs.org/big.js
-284 verbose request no auth needed
-285 info attempt registry request try #1 at 6:33:52 PM
-286 verbose etag W/"586ccd9e-5b5b"
-287 verbose lastModified Wed, 04 Jan 2017 10:25:34 GMT
-288 http request GET https://registry.npmjs.org/big.js
-289 verbose request uri https://registry.npmjs.org/json5
-290 verbose request no auth needed
-291 info attempt registry request try #1 at 6:33:52 PM
-292 verbose etag W/"5956e1b1-468d"
-293 verbose lastModified Fri, 30 Jun 2017 23:41:37 GMT
-294 http request GET https://registry.npmjs.org/json5
-295 verbose request uri https://registry.npmjs.org/emojis-list
-296 verbose request no auth needed
-297 info attempt registry request try #1 at 6:33:52 PM
-298 verbose etag W/"582f83e1-345b"
-299 verbose lastModified Fri, 18 Nov 2016 22:42:41 GMT
-300 http request GET https://registry.npmjs.org/emojis-list
-301 http 304 https://registry.npmjs.org/big.js
-302 verbose headers { date: 'Fri, 07 Jul 2017 23:33:52 GMT',
-302 verbose headers   via: '1.1 varnish',
-302 verbose headers   'cache-control': 'max-age=300',
-302 verbose headers   etag: 'W/"586ccd9e-5b5b"',
-302 verbose headers   age: '282',
-302 verbose headers   connection: 'keep-alive',
-302 verbose headers   'x-served-by': 'cache-ord1720-ORD',
-302 verbose headers   'x-cache': 'HIT',
-302 verbose headers   'x-cache-hits': '2',
-302 verbose headers   'x-timer': 'S1499470432.133659,VS0,VE0',
-302 verbose headers   vary: 'Accept-Encoding' }
-303 silly get cb [ 304,
-303 silly get   { date: 'Fri, 07 Jul 2017 23:33:52 GMT',
-303 silly get     via: '1.1 varnish',
-303 silly get     'cache-control': 'max-age=300',
-303 silly get     etag: 'W/"586ccd9e-5b5b"',
-303 silly get     age: '282',
-303 silly get     connection: 'keep-alive',
-303 silly get     'x-served-by': 'cache-ord1720-ORD',
-303 silly get     'x-cache': 'HIT',
-303 silly get     'x-cache-hits': '2',
-303 silly get     'x-timer': 'S1499470432.133659,VS0,VE0',
-303 silly get     vary: 'Accept-Encoding' } ]
-304 verbose etag https://registry.npmjs.org/big.js from cache
-305 verbose get saving big.js to /Users/Ashhad/.npm/registry.npmjs.org/big.js/.cache.json
-306 verbose correctMkdir /Users/Ashhad/.npm correctMkdir not in flight; initializing
-307 silly addNameRange number 2 { name: 'big.js', range: '>=3.1.3 <4.0.0', hasData: true }
-308 silly addNameRange versions [ 'big.js',
-308 silly addNameRange   [ '2.0.0',
-308 silly addNameRange     '2.1.0',
-308 silly addNameRange     '2.2.0',
-308 silly addNameRange     '2.4.0',
-308 silly addNameRange     '2.4.1',
-308 silly addNameRange     '2.5.0',
-308 silly addNameRange     '2.5.1',
-308 silly addNameRange     '3.0.0',
-308 silly addNameRange     '3.0.1',
-308 silly addNameRange     '3.0.2',
-308 silly addNameRange     '3.1.1',
-308 silly addNameRange     '3.1.2',
-308 silly addNameRange     '3.1.3' ] ]
-309 silly addNamed big.js@3.1.3
-310 verbose addNamed "3.1.3" is a plain semver version for big.js
-311 http 304 https://registry.npmjs.org/json5
-312 verbose headers { date: 'Fri, 07 Jul 2017 23:33:52 GMT',
-312 verbose headers   via: '1.1 varnish',
-312 verbose headers   'cache-control': 'max-age=300',
-312 verbose headers   etag: 'W/"5956e1b1-468d"',
-312 verbose headers   age: '114',
-312 verbose headers   connection: 'keep-alive',
-312 verbose headers   'x-served-by': 'cache-ord1737-ORD',
-312 verbose headers   'x-cache': 'HIT',
-312 verbose headers   'x-cache-hits': '4',
-312 verbose headers   'x-timer': 'S1499470432.138408,VS0,VE0',
-312 verbose headers   vary: 'Accept-Encoding' }
-313 silly get cb [ 304,
-313 silly get   { date: 'Fri, 07 Jul 2017 23:33:52 GMT',
-313 silly get     via: '1.1 varnish',
-313 silly get     'cache-control': 'max-age=300',
-313 silly get     etag: 'W/"5956e1b1-468d"',
-313 silly get     age: '114',
-313 silly get     connection: 'keep-alive',
-313 silly get     'x-served-by': 'cache-ord1737-ORD',
-313 silly get     'x-cache': 'HIT',
-313 silly get     'x-cache-hits': '4',
-313 silly get     'x-timer': 'S1499470432.138408,VS0,VE0',
-313 silly get     vary: 'Accept-Encoding' } ]
-314 verbose etag https://registry.npmjs.org/json5 from cache
-315 verbose get saving json5 to /Users/Ashhad/.npm/registry.npmjs.org/json5/.cache.json
-316 verbose correctMkdir /Users/Ashhad/.npm correctMkdir not in flight; initializing
-317 silly cache afterAdd big.js@3.1.3
-318 verbose afterAdd /Users/Ashhad/.npm/big.js/3.1.3/package/package.json not in flight; writing
-319 verbose correctMkdir /Users/Ashhad/.npm correctMkdir not in flight; initializing
-320 silly addNameRange number 2 { name: 'json5', range: '>=0.5.0 <0.6.0', hasData: true }
-321 silly addNameRange versions [ 'json5',
-321 silly addNameRange   [ '0.0.0', '0.0.1', '0.1.0', '0.2.0', '0.4.0', '0.5.0', '0.5.1' ] ]
-322 silly addNamed json5@0.5.1
-323 verbose addNamed "0.5.1" is a plain semver version for json5
-324 verbose afterAdd /Users/Ashhad/.npm/big.js/3.1.3/package/package.json written
-325 silly cache afterAdd json5@0.5.1
-326 verbose afterAdd /Users/Ashhad/.npm/json5/0.5.1/package/package.json not in flight; writing
-327 verbose correctMkdir /Users/Ashhad/.npm correctMkdir not in flight; initializing
-328 verbose afterAdd /Users/Ashhad/.npm/json5/0.5.1/package/package.json written
-329 http 304 https://registry.npmjs.org/emojis-list
-330 verbose headers { date: 'Fri, 07 Jul 2017 23:33:52 GMT',
-330 verbose headers   via: '1.1 varnish',
-330 verbose headers   'cache-control': 'max-age=300',
-330 verbose headers   etag: 'W/"582f83e1-345b"',
-330 verbose headers   age: '89',
-330 verbose headers   connection: 'keep-alive',
-330 verbose headers   'x-served-by': 'cache-ord1732-ORD',
-330 verbose headers   'x-cache': 'HIT',
-330 verbose headers   'x-cache-hits': '1',
-330 verbose headers   'x-timer': 'S1499470432.171364,VS0,VE0',
-330 verbose headers   vary: 'Accept-Encoding' }
-331 silly get cb [ 304,
-331 silly get   { date: 'Fri, 07 Jul 2017 23:33:52 GMT',
-331 silly get     via: '1.1 varnish',
-331 silly get     'cache-control': 'max-age=300',
-331 silly get     etag: 'W/"582f83e1-345b"',
-331 silly get     age: '89',
-331 silly get     connection: 'keep-alive',
-331 silly get     'x-served-by': 'cache-ord1732-ORD',
-331 silly get     'x-cache': 'HIT',
-331 silly get     'x-cache-hits': '1',
-331 silly get     'x-timer': 'S1499470432.171364,VS0,VE0',
-331 silly get     vary: 'Accept-Encoding' } ]
-332 verbose etag https://registry.npmjs.org/emojis-list from cache
-333 verbose get saving emojis-list to /Users/Ashhad/.npm/registry.npmjs.org/emojis-list/.cache.json
-334 verbose correctMkdir /Users/Ashhad/.npm correctMkdir not in flight; initializing
-335 silly addNameRange number 2 { name: 'emojis-list', range: '>=2.0.0 <3.0.0', hasData: true }
-336 silly addNameRange versions [ 'emojis-list',
-336 silly addNameRange   [ '1.0.0', '1.0.1', '1.0.2', '1.0.3', '2.0.0', '2.0.1', '2.1.0' ] ]
-337 silly addNamed emojis-list@2.1.0
-338 verbose addNamed "2.1.0" is a plain semver version for emojis-list
-339 silly cache afterAdd emojis-list@2.1.0
-340 verbose afterAdd /Users/Ashhad/.npm/emojis-list/2.1.0/package/package.json not in flight; writing
-341 verbose correctMkdir /Users/Ashhad/.npm correctMkdir not in flight; initializing
-342 verbose afterAdd /Users/Ashhad/.npm/emojis-list/2.1.0/package/package.json written
-343 silly install resolved [ { name: 'big.js',
-343 silly install resolved     description: 'A small, fast, easy-to-use library for arbitrary-precision decimal arithmetic',
-343 silly install resolved     version: '3.1.3',
-343 silly install resolved     keywords:
-343 silly install resolved      [ 'arbitrary',
-343 silly install resolved        'precision',
-343 silly install resolved        'arithmetic',
-343 silly install resolved        'big',
-343 silly install resolved        'number',
-343 silly install resolved        'decimal',
-343 silly install resolved        'float',
-343 silly install resolved        'biginteger',
-343 silly install resolved        'bigdecimal',
-343 silly install resolved        'bignumber',
-343 silly install resolved        'bigint',
-343 silly install resolved        'bignum' ],
-343 silly install resolved     repository:
-343 silly install resolved      { type: 'git',
-343 silly install resolved        url: 'git+https://github.com/MikeMcl/big.js.git' },
-343 silly install resolved     main: './big',
-343 silly install resolved     author: { name: 'Michael Mclaughlin', email: 'M8ch88l@gmail.com' },
-343 silly install resolved     bugs: { url: 'https://github.com/MikeMcl/big.js/issues' },
-343 silly install resolved     engines: { node: '*' },
-343 silly install resolved     license: 'MIT',
-343 silly install resolved     scripts:
-343 silly install resolved      { test: 'node ./test/every-test.js',
-343 silly install resolved        build: 'uglifyjs -o ./big.min.js ./big.js' },
-343 silly install resolved     files: [ 'big.js', 'big.min.js' ],
-343 silly install resolved     gitHead: '86268e96b3dbf6db8ce319489f410277d9d4ea1b',
-343 silly install resolved     homepage: 'https://github.com/MikeMcl/big.js#readme',
-343 silly install resolved     _id: 'big.js@3.1.3',
-343 silly install resolved     _shasum: '4cada2193652eb3ca9ec8e55c9015669c9806978',
-343 silly install resolved     _from: 'big.js@>=3.1.3 <4.0.0',
-343 silly install resolved     _npmVersion: '2.9.1',
-343 silly install resolved     _nodeVersion: '0.12.0',
-343 silly install resolved     _npmUser: { name: 'mikemcl', email: 'M8ch88l@gmail.com' },
-343 silly install resolved     maintainers: [ [Object] ],
-343 silly install resolved     dist:
-343 silly install resolved      { shasum: '4cada2193652eb3ca9ec8e55c9015669c9806978',
-343 silly install resolved        tarball: 'https://registry.npmjs.org/big.js/-/big.js-3.1.3.tgz' },
-343 silly install resolved     directories: {},
-343 silly install resolved     _resolved: 'https://registry.npmjs.org/big.js/-/big.js-3.1.3.tgz',
-343 silly install resolved     readme: 'ERROR: No README data found!' },
-343 silly install resolved   { name: 'json5',
-343 silly install resolved     version: '0.5.1',
-343 silly install resolved     description: 'JSON for the ES5 era.',
-343 silly install resolved     keywords: [ 'json', 'es5' ],
-343 silly install resolved     author: { name: 'Aseem Kishore', email: 'aseem.kishore@gmail.com' },
-343 silly install resolved     contributors: [ [Object], [Object], [Object] ],
-343 silly install resolved     main: 'lib/json5.js',
-343 silly install resolved     bin: { json5: 'lib/cli.js' },
-343 silly install resolved     files: [ 'lib/' ],
-343 silly install resolved     dependencies: {},
-343 silly install resolved     devDependencies:
-343 silly install resolved      { gulp: '^3.9.1',
-343 silly install resolved        'gulp-jshint': '^2.0.1',
-343 silly install resolved        jshint: '^2.9.3',
-343 silly install resolved        'jshint-stylish': '^2.2.1',
-343 silly install resolved        mocha: '^3.1.0' },
-343 silly install resolved     scripts:
-343 silly install resolved      { build: 'node ./lib/cli.js -c package.json5',
-343 silly install resolved        test: 'mocha --ui exports --reporter spec' },
-343 silly install resolved     homepage: 'http://json5.org/',
-343 silly install resolved     license: 'MIT',
-343 silly install resolved     repository: { type: 'git', url: 'git+https://github.com/aseemk/json5.git' },
-343 silly install resolved     gitHead: '6be6a70e250e6fbbf42db75cd1f6a1aadeeeeb07',
-343 silly install resolved     bugs: { url: 'https://github.com/aseemk/json5/issues' },
-343 silly install resolved     _id: 'json5@0.5.1',
-343 silly install resolved     _shasum: '1eade7acc012034ad84e2396767ead9fa5495821',
-343 silly install resolved     _from: 'json5@>=0.5.0 <0.6.0',
-343 silly install resolved     _npmVersion: '3.10.9',
-343 silly install resolved     _nodeVersion: '6.9.1',
-343 silly install resolved     _npmUser: { name: 'jordanbtucker', email: 'jordanbtucker@gmail.com' },
-343 silly install resolved     dist:
-343 silly install resolved      { shasum: '1eade7acc012034ad84e2396767ead9fa5495821',
-343 silly install resolved        tarball: 'https://registry.npmjs.org/json5/-/json5-0.5.1.tgz' },
-343 silly install resolved     maintainers: [ [Object], [Object] ],
-343 silly install resolved     _npmOperationalInternal:
-343 silly install resolved      { host: 'packages-18-east.internal.npmjs.com',
-343 silly install resolved        tmp: 'tmp/json5-0.5.1.tgz_1480284434295_0.5308296058792621' },
-343 silly install resolved     directories: {},
-343 silly install resolved     _resolved: 'https://registry.npmjs.org/json5/-/json5-0.5.1.tgz',
-343 silly install resolved     readme: 'ERROR: No README data found!' },
-343 silly install resolved   { name: 'emojis-list',
-343 silly install resolved     description: 'Complete list of standard emojis.',
-343 silly install resolved     homepage: 'https://github.com/Kikobeats/emojis-list',
-343 silly install resolved     version: '2.1.0',
-343 silly install resolved     main: './index.js',
-343 silly install resolved     author:
-343 silly install resolved      { name: 'Kiko Beats',
-343 silly install resolved        email: 'josefrancisco.verdu@gmail.com',
-343 silly install resolved        url: 'https://github.com/Kikobeats' },
-343 silly install resolved     repository:
-343 silly install resolved      { type: 'git',
-343 silly install resolved        url: 'git+https://github.com/kikobeats/emojis-list.git' },
-343 silly install resolved     bugs: { url: 'https://github.com/Kikobeats/emojis-list/issues' },
-343 silly install resolved     keywords: [ 'archive', 'complete', 'emoji', 'list', 'standard' ],
-343 silly install resolved     devDependencies:
-343 silly install resolved      { acho: 'latest',
-343 silly install resolved        browserify: 'latest',
-343 silly install resolved        cheerio: 'latest',
-343 silly install resolved        got: '>=5 <6',
-343 silly install resolved        gulp: 'latest',
-343 silly install resolved        'gulp-header': 'latest',
-343 silly install resolved        'gulp-uglify': 'latest',
-343 silly install resolved        'gulp-util': 'latest',
-343 silly install resolved        standard: 'latest',
-343 silly install resolved        'vinyl-buffer': 'latest',
-343 silly install resolved        'vinyl-source-stream': 'latest' },
-343 silly install resolved     engines: { node: '>= 0.10' },
-343 silly install resolved     files: [ 'index.js' ],
-343 silly install resolved     scripts:
-343 silly install resolved      { pretest: 'standard update.js',
-343 silly install resolved        test: 'echo \'YOLO\'',
-343 silly install resolved        update: 'node update' },
-343 silly install resolved     license: 'MIT',
-343 silly install resolved     gitHead: 'be6942ce8973057a6ac3aab5b84a9a9585e89417',
-343 silly install resolved     _id: 'emojis-list@2.1.0',
-343 silly install resolved     _shasum: '4daa4d9db00f9819880c79fa457ae5b09a1fd389',
-343 silly install resolved     _from: 'emojis-list@>=2.0.0 <3.0.0',
-343 silly install resolved     _npmVersion: '3.10.3',
-343 silly install resolved     _nodeVersion: '6.7.0',
-343 silly install resolved     _npmUser: { name: 'kikobeats', email: 'josefrancisco.verdu@gmail.com' },
-343 silly install resolved     dist:
-343 silly install resolved      { shasum: '4daa4d9db00f9819880c79fa457ae5b09a1fd389',
-343 silly install resolved        tarball: 'https://registry.npmjs.org/emojis-list/-/emojis-list-2.1.0.tgz' },
-343 silly install resolved     maintainers: [ [Object] ],
-343 silly install resolved     _npmOperationalInternal:
-343 silly install resolved      { host: 'packages-16-east.internal.npmjs.com',
-343 silly install resolved        tmp: 'tmp/emojis-list-2.1.0.tgz_1475503274409_0.1915575808379799' },
-343 silly install resolved     directories: {},
-343 silly install resolved     _resolved: 'https://registry.npmjs.org/emojis-list/-/emojis-list-2.1.0.tgz',
-343 silly install resolved     readme: 'ERROR: No README data found!' } ]
-344 info install big.js@3.1.3 into /Users/Ashhad/React/control_panel/node_modules/url-loader/node_modules/loader-utils
-345 info install json5@0.5.1 into /Users/Ashhad/React/control_panel/node_modules/url-loader/node_modules/loader-utils
-346 info install emojis-list@2.1.0 into /Users/Ashhad/React/control_panel/node_modules/url-loader/node_modules/loader-utils
-347 info installOne big.js@3.1.3
-348 verbose installOne of big.js to /Users/Ashhad/React/control_panel/node_modules/url-loader/node_modules/loader-utils not in flight; installing
-349 verbose correctMkdir /Users/Ashhad/.npm/_locks correctMkdir not in flight; initializing
-350 info installOne json5@0.5.1
-351 verbose installOne of json5 to /Users/Ashhad/React/control_panel/node_modules/url-loader/node_modules/loader-utils not in flight; installing
-352 verbose correctMkdir /Users/Ashhad/.npm/_locks correctMkdir not in flight; initializing
-353 info installOne emojis-list@2.1.0
-354 verbose installOne of emojis-list to /Users/Ashhad/React/control_panel/node_modules/url-loader/node_modules/loader-utils not in flight; installing
-355 verbose correctMkdir /Users/Ashhad/.npm/_locks correctMkdir not in flight; initializing
-356 verbose lock using /Users/Ashhad/.npm/_locks/big-js-abf391b0950665bc.lock for /Users/Ashhad/React/control_panel/node_modules/url-loader/node_modules/loader-utils/node_modules/big.js
-357 silly install write writing big.js 3.1.3 to /Users/Ashhad/React/control_panel/node_modules/url-loader/node_modules/loader-utils/node_modules/big.js
-358 verbose lock using /Users/Ashhad/.npm/_locks/json5-87844b00c60de5d4.lock for /Users/Ashhad/React/control_panel/node_modules/url-loader/node_modules/loader-utils/node_modules/json5
-359 verbose lock using /Users/Ashhad/.npm/_locks/emojis-list-65f68e3a62eaef1b.lock for /Users/Ashhad/React/control_panel/node_modules/url-loader/node_modules/loader-utils/node_modules/emojis-list
-360 silly install write writing json5 0.5.1 to /Users/Ashhad/React/control_panel/node_modules/url-loader/node_modules/loader-utils/node_modules/json5
-361 silly install write writing emojis-list 2.1.0 to /Users/Ashhad/React/control_panel/node_modules/url-loader/node_modules/loader-utils/node_modules/emojis-list
-362 verbose unbuild node_modules/url-loader/node_modules/loader-utils/node_modules/big.js
-363 verbose unbuild node_modules/url-loader/node_modules/loader-utils/node_modules/emojis-list
-364 silly gentlyRm /Users/Ashhad/React/control_panel/node_modules/url-loader/node_modules/loader-utils/node_modules/big.js is being purged from base /Users/Ashhad/React/control_panel
-365 verbose gentlyRm don't care about contents; nuking /Users/Ashhad/React/control_panel/node_modules/url-loader/node_modules/loader-utils/node_modules/big.js
-366 verbose unbuild node_modules/url-loader/node_modules/loader-utils/node_modules/json5
-367 verbose tar unpack /Users/Ashhad/.npm/big.js/3.1.3/package.tgz
-368 verbose tar unpacking to /Users/Ashhad/React/control_panel/node_modules/url-loader/node_modules/loader-utils/node_modules/big.js
-369 silly gentlyRm /Users/Ashhad/React/control_panel/node_modules/url-loader/node_modules/loader-utils/node_modules/big.js is being purged
-370 verbose gentlyRm don't care about contents; nuking /Users/Ashhad/React/control_panel/node_modules/url-loader/node_modules/loader-utils/node_modules/big.js
-371 silly gentlyRm /Users/Ashhad/React/control_panel/node_modules/url-loader/node_modules/loader-utils/node_modules/emojis-list is being purged from base /Users/Ashhad/React/control_panel
-372 verbose gentlyRm don't care about contents; nuking /Users/Ashhad/React/control_panel/node_modules/url-loader/node_modules/loader-utils/node_modules/emojis-list
-373 silly gunzTarPerm modes [ '755', '644' ]
-374 silly gentlyRm /Users/Ashhad/React/control_panel/node_modules/url-loader/node_modules/loader-utils/node_modules/json5 is being purged from base /Users/Ashhad/React/control_panel
-375 verbose gentlyRm don't care about contents; nuking /Users/Ashhad/React/control_panel/node_modules/url-loader/node_modules/loader-utils/node_modules/json5
-376 verbose tar unpack /Users/Ashhad/.npm/emojis-list/2.1.0/package.tgz
-377 verbose tar unpacking to /Users/Ashhad/React/control_panel/node_modules/url-loader/node_modules/loader-utils/node_modules/emojis-list
-378 silly gentlyRm /Users/Ashhad/React/control_panel/node_modules/url-loader/node_modules/loader-utils/node_modules/emojis-list is being purged
-379 verbose gentlyRm don't care about contents; nuking /Users/Ashhad/React/control_panel/node_modules/url-loader/node_modules/loader-utils/node_modules/emojis-list
-380 verbose tar unpack /Users/Ashhad/.npm/json5/0.5.1/package.tgz
-381 verbose tar unpacking to /Users/Ashhad/React/control_panel/node_modules/url-loader/node_modules/loader-utils/node_modules/json5
-382 silly gentlyRm /Users/Ashhad/React/control_panel/node_modules/url-loader/node_modules/loader-utils/node_modules/json5 is being purged
-383 verbose gentlyRm don't care about contents; nuking /Users/Ashhad/React/control_panel/node_modules/url-loader/node_modules/loader-utils/node_modules/json5
-384 silly gunzTarPerm modes [ '755', '644' ]
-385 silly gunzTarPerm modes [ '755', '644' ]
-386 silly gunzTarPerm extractEntry package.json
-387 silly gunzTarPerm modified mode [ 'package.json', 438, 420 ]
-388 silly gunzTarPerm extractEntry package.json
-389 silly gunzTarPerm extractEntry package.json
-390 silly gunzTarPerm modified mode [ 'package.json', 438, 420 ]
-391 silly gunzTarPerm extractEntry README.md
-392 silly gunzTarPerm modified mode [ 'README.md', 438, 420 ]
-393 silly gunzTarPerm extractEntry LICENCE
-394 silly gunzTarPerm modified mode [ 'LICENCE', 438, 420 ]
-395 silly gunzTarPerm extractEntry README.md
-396 silly gunzTarPerm extractEntry index.js
-397 silly gunzTarPerm extractEntry README.md
-398 silly gunzTarPerm modified mode [ 'README.md', 438, 420 ]
-399 silly gunzTarPerm extractEntry LICENSE.md
-400 silly gunzTarPerm modified mode [ 'LICENSE.md', 438, 420 ]
-401 silly gunzTarPerm extractEntry big.js
-402 silly gunzTarPerm modified mode [ 'big.js', 438, 420 ]
-403 silly gunzTarPerm extractEntry big.min.js
-404 silly gunzTarPerm modified mode [ 'big.min.js', 438, 420 ]
-405 silly gunzTarPerm extractEntry CHANGELOG.md
-406 silly gunzTarPerm extractEntry CHANGELOG.md
-407 silly gunzTarPerm modified mode [ 'CHANGELOG.md', 438, 420 ]
-408 silly gunzTarPerm extractEntry lib/cli.js
-409 silly gunzTarPerm modified mode [ 'lib/cli.js', 438, 420 ]
-410 silly gunzTarPerm extractEntry lib/json5.js
-411 silly gunzTarPerm modified mode [ 'lib/json5.js', 438, 420 ]
-412 silly gunzTarPerm extractEntry lib/require.js
-413 silly gunzTarPerm modified mode [ 'lib/require.js', 438, 420 ]
-414 silly gunzTarPerm extractEntry LICENSE.md
-415 verbose write writing to /Users/Ashhad/React/control_panel/node_modules/url-loader/node_modules/loader-utils/node_modules/big.js/package.json
-416 verbose write writing to /Users/Ashhad/React/control_panel/node_modules/url-loader/node_modules/loader-utils/node_modules/emojis-list/package.json
-417 info preinstall big.js@3.1.3
-418 verbose readDependencies loading dependencies from /Users/Ashhad/React/control_panel/node_modules/url-loader/node_modules/loader-utils/node_modules/big.js/package.json
-419 info preinstall emojis-list@2.1.0
-420 verbose readDependencies loading dependencies from /Users/Ashhad/React/control_panel/node_modules/url-loader/node_modules/loader-utils/node_modules/emojis-list/package.json
-421 verbose readDependencies loading dependencies from /Users/Ashhad/React/control_panel/node_modules/url-loader/node_modules/loader-utils/node_modules/big.js/package.json
-422 verbose readDependencies loading dependencies from /Users/Ashhad/React/control_panel/node_modules/url-loader/node_modules/loader-utils/node_modules/emojis-list/package.json
-423 silly install resolved []
-424 verbose about to build /Users/Ashhad/React/control_panel/node_modules/url-loader/node_modules/loader-utils/node_modules/big.js
-425 info build /Users/Ashhad/React/control_panel/node_modules/url-loader/node_modules/loader-utils/node_modules/big.js
-426 info linkStuff big.js@3.1.3
-427 silly linkStuff big.js@3.1.3 has /Users/Ashhad/React/control_panel/node_modules/url-loader/node_modules/loader-utils/node_modules as its parent node_modules
-428 silly install resolved []
-429 verbose about to build /Users/Ashhad/React/control_panel/node_modules/url-loader/node_modules/loader-utils/node_modules/emojis-list
-430 info build /Users/Ashhad/React/control_panel/node_modules/url-loader/node_modules/loader-utils/node_modules/emojis-list
-431 verbose write writing to /Users/Ashhad/React/control_panel/node_modules/url-loader/node_modules/loader-utils/node_modules/json5/package.json
-432 info linkStuff emojis-list@2.1.0
-433 silly linkStuff emojis-list@2.1.0 has /Users/Ashhad/React/control_panel/node_modules/url-loader/node_modules/loader-utils/node_modules as its parent node_modules
-434 info preinstall json5@0.5.1
-435 verbose linkBins big.js@3.1.3
-436 verbose linkMans big.js@3.1.3
-437 verbose rebuildBundles big.js@3.1.3
-438 verbose readDependencies loading dependencies from /Users/Ashhad/React/control_panel/node_modules/url-loader/node_modules/loader-utils/node_modules/json5/package.json
-439 info install big.js@3.1.3
-440 info postinstall big.js@3.1.3
-441 verbose linkBins emojis-list@2.1.0
-442 verbose linkMans emojis-list@2.1.0
-443 verbose rebuildBundles emojis-list@2.1.0
-444 verbose unlock done using /Users/Ashhad/.npm/_locks/big-js-abf391b0950665bc.lock for /Users/Ashhad/React/control_panel/node_modules/url-loader/node_modules/loader-utils/node_modules/big.js
-445 info install emojis-list@2.1.0
-446 verbose readDependencies loading dependencies from /Users/Ashhad/React/control_panel/node_modules/url-loader/node_modules/loader-utils/node_modules/json5/package.json
-447 info postinstall emojis-list@2.1.0
-448 verbose unlock done using /Users/Ashhad/.npm/_locks/emojis-list-65f68e3a62eaef1b.lock for /Users/Ashhad/React/control_panel/node_modules/url-loader/node_modules/loader-utils/node_modules/emojis-list
-449 silly install resolved []
-450 verbose about to build /Users/Ashhad/React/control_panel/node_modules/url-loader/node_modules/loader-utils/node_modules/json5
-451 info build /Users/Ashhad/React/control_panel/node_modules/url-loader/node_modules/loader-utils/node_modules/json5
-452 info linkStuff json5@0.5.1
-453 silly linkStuff json5@0.5.1 has /Users/Ashhad/React/control_panel/node_modules/url-loader/node_modules/loader-utils/node_modules as its parent node_modules
-454 verbose linkBins json5@0.5.1
-455 verbose link bins [ { json5: 'lib/cli.js' },
-455 verbose link bins   '/Users/Ashhad/React/control_panel/node_modules/url-loader/node_modules/loader-utils/node_modules/.bin',
-455 verbose link bins   false ]
-456 verbose linkMans json5@0.5.1
-457 verbose rebuildBundles json5@0.5.1
-458 silly gentlyRm /Users/Ashhad/React/control_panel/node_modules/url-loader/node_modules/loader-utils/node_modules/.bin/json5 is being purged
-459 verbose gentlyRm don't care about contents; nuking /Users/Ashhad/React/control_panel/node_modules/url-loader/node_modules/loader-utils/node_modules/.bin/json5
-460 info install json5@0.5.1
-461 info postinstall json5@0.5.1
-462 verbose unlock done using /Users/Ashhad/.npm/_locks/json5-87844b00c60de5d4.lock for /Users/Ashhad/React/control_panel/node_modules/url-loader/node_modules/loader-utils/node_modules/json5
-463 verbose about to build /Users/Ashhad/React/control_panel/node_modules/url-loader/node_modules/loader-utils
-464 info build /Users/Ashhad/React/control_panel/node_modules/url-loader/node_modules/loader-utils
-465 info linkStuff loader-utils@1.1.0
-466 silly linkStuff loader-utils@1.1.0 has /Users/Ashhad/React/control_panel/node_modules/url-loader/node_modules as its parent node_modules
-467 verbose linkBins loader-utils@1.1.0
-468 verbose linkMans loader-utils@1.1.0
-469 verbose rebuildBundles loader-utils@1.1.0
-470 verbose rebuildBundles [ '.bin', 'big.js', 'emojis-list', 'json5' ]
-471 info install loader-utils@1.1.0
-472 info postinstall loader-utils@1.1.0
-473 verbose unlock done using /Users/Ashhad/.npm/_locks/loader-utils-23aa74ce81b5d9f7.lock for /Users/Ashhad/React/control_panel/node_modules/url-loader/node_modules/loader-utils
-474 verbose about to build /Users/Ashhad/React/control_panel/node_modules/url-loader
-475 info build /Users/Ashhad/React/control_panel/node_modules/url-loader
-476 info linkStuff url-loader@0.5.9
-477 silly linkStuff url-loader@0.5.9 has /Users/Ashhad/React/control_panel/node_modules as its parent node_modules
-478 verbose linkBins url-loader@0.5.9
-479 verbose linkMans url-loader@0.5.9
-480 verbose rebuildBundles url-loader@0.5.9
-481 verbose rebuildBundles [ '.bin', 'loader-utils', 'mime' ]
-482 info install url-loader@0.5.9
-483 info postinstall url-loader@0.5.9
-484 verbose unlock done using /Users/Ashhad/.npm/_locks/url-loader-c15d664e21b1afa0.lock for /Users/Ashhad/React/control_panel/node_modules/url-loader
-485 verbose validateInstall loading /Users/Ashhad/React/control_panel/package.json for validation
-486 warn unmet dependency /Users/Ashhad/React/control_panel/node_modules/react-redux requires hoist-non-react-statics@'^1.0.3' but will load
-486 warn unmet dependency /Users/Ashhad/React/control_panel/node_modules/hoist-non-react-statics,
-486 warn unmet dependency which is version 2.0.0
-487 warn unmet dependency /Users/Ashhad/React/control_panel/node_modules/react-redux requires lodash@'^4.2.0' but will load
-487 warn unmet dependency /Users/Ashhad/React/control_panel/node_modules/lodash,
-487 warn unmet dependency which is version 3.10.1
-488 warn unmet dependency /Users/Ashhad/React/control_panel/node_modules/redux requires lodash@'^4.2.1' but will load
-488 warn unmet dependency /Users/Ashhad/React/control_panel/node_modules/lodash,
-488 warn unmet dependency which is version 3.10.1
-489 verbose stack Error: The package webpack@3.0.0 does not satisfy its siblings' peerDependencies requirements!
-489 verbose stack     at /usr/local/lib/node_modules/npm/lib/install.js:125:32
-489 verbose stack     at /usr/local/lib/node_modules/npm/lib/install.js:268:7
-489 verbose stack     at /usr/local/lib/node_modules/npm/node_modules/read-installed/read-installed.js:142:5
-489 verbose stack     at /usr/local/lib/node_modules/npm/node_modules/read-installed/read-installed.js:263:14
-489 verbose stack     at cb (/usr/local/lib/node_modules/npm/node_modules/slide/lib/async-map.js:47:24)
-489 verbose stack     at /usr/local/lib/node_modules/npm/node_modules/read-installed/read-installed.js:263:14
-489 verbose stack     at cb (/usr/local/lib/node_modules/npm/node_modules/slide/lib/async-map.js:47:24)
-489 verbose stack     at /usr/local/lib/node_modules/npm/node_modules/read-installed/read-installed.js:263:14
-489 verbose stack     at cb (/usr/local/lib/node_modules/npm/node_modules/slide/lib/async-map.js:47:24)
-489 verbose stack     at /usr/local/lib/node_modules/npm/node_modules/read-installed/read-installed.js:263:14
-490 verbose cwd /Users/Ashhad/React/control_panel
-491 error Darwin 14.5.0
-492 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "install" "--save-dev" "url-loader"
-493 error node v4.4.2
-494 error npm  v2.15.0
-495 error code EPEERINVALID
-496 error peerinvalid The package webpack@3.0.0 does not satisfy its siblings' peerDependencies requirements!
-496 error peerinvalid Peer babel-loader@5.4.2 wants webpack@1 || 2 || ^2.1.0-beta
-497 verbose exit [ 1, true ]
+40 verbose installManyTop reading scoped package data from /Users/Ashhad/React/control_panel/node_modules/url-loader/package.json
+41 verbose installManyTop reading scoped package data from /Users/Ashhad/React/control_panel/node_modules/webpack/package.json
+42 verbose installManyTop reading scoped package data from /Users/Ashhad/React/control_panel/node_modules/whatwg-fetch/package.json
+43 info package.json less-loader@2.2.3 No license field.
+44 info package.json materialize-css@0.96.1 No license field.
+45 verbose readDependencies loading dependencies from /Users/Ashhad/React/control_panel/package.json
+46 silly cache add args [ 'react-router-bootstrap', null ]
+47 verbose cache add spec react-router-bootstrap
+48 silly cache add parsed spec Result {
+48 silly cache add   raw: 'react-router-bootstrap',
+48 silly cache add   scope: null,
+48 silly cache add   name: 'react-router-bootstrap',
+48 silly cache add   rawSpec: '',
+48 silly cache add   spec: 'latest',
+48 silly cache add   type: 'tag' }
+49 silly addNamed react-router-bootstrap@latest
+50 verbose addNamed "latest" is being treated as a dist-tag for react-router-bootstrap
+51 info addNameTag [ 'react-router-bootstrap', 'latest' ]
+52 silly mapToRegistry name react-router-bootstrap
+53 silly mapToRegistry using default registry
+54 silly mapToRegistry registry https://registry.npmjs.org/
+55 silly mapToRegistry data Result {
+55 silly mapToRegistry   raw: 'react-router-bootstrap',
+55 silly mapToRegistry   scope: null,
+55 silly mapToRegistry   name: 'react-router-bootstrap',
+55 silly mapToRegistry   rawSpec: '',
+55 silly mapToRegistry   spec: 'latest',
+55 silly mapToRegistry   type: 'tag' }
+56 silly mapToRegistry uri https://registry.npmjs.org/react-router-bootstrap
+57 verbose addNameTag registry:https://registry.npmjs.org/react-router-bootstrap not in flight; fetching
+58 verbose request uri https://registry.npmjs.org/react-router-bootstrap
+59 verbose request no auth needed
+60 info attempt registry request try #1 at 8:39:09 PM
+61 verbose request id c32c745e26434b26
+62 verbose etag W/"5954078d-20296"
+63 verbose lastModified Wed, 28 Jun 2017 19:46:21 GMT
+64 http request GET https://registry.npmjs.org/react-router-bootstrap
+65 http 304 https://registry.npmjs.org/react-router-bootstrap
+66 verbose headers { date: 'Thu, 13 Jul 2017 01:39:09 GMT',
+66 verbose headers   via: '1.1 varnish',
+66 verbose headers   'cache-control': 'max-age=300',
+66 verbose headers   etag: 'W/"5954078d-20296"',
+66 verbose headers   age: '0',
+66 verbose headers   connection: 'keep-alive',
+66 verbose headers   'x-served-by': 'cache-mdw17349-MDW',
+66 verbose headers   'x-cache': 'MISS',
+66 verbose headers   'x-cache-hits': '0',
+66 verbose headers   'x-timer': 'S1499909950.650583,VS0,VE135',
+66 verbose headers   vary: 'Accept-Encoding, Accept' }
+67 silly get cb [ 304,
+67 silly get   { date: 'Thu, 13 Jul 2017 01:39:09 GMT',
+67 silly get     via: '1.1 varnish',
+67 silly get     'cache-control': 'max-age=300',
+67 silly get     etag: 'W/"5954078d-20296"',
+67 silly get     age: '0',
+67 silly get     connection: 'keep-alive',
+67 silly get     'x-served-by': 'cache-mdw17349-MDW',
+67 silly get     'x-cache': 'MISS',
+67 silly get     'x-cache-hits': '0',
+67 silly get     'x-timer': 'S1499909950.650583,VS0,VE135',
+67 silly get     vary: 'Accept-Encoding, Accept' } ]
+68 verbose etag https://registry.npmjs.org/react-router-bootstrap from cache
+69 verbose get saving react-router-bootstrap to /Users/Ashhad/.npm/registry.npmjs.org/react-router-bootstrap/.cache.json
+70 verbose correctMkdir /Users/Ashhad/.npm correctMkdir not in flight; initializing
+71 silly addNameTag next cb for react-router-bootstrap with tag latest
+72 silly addNamed react-router-bootstrap@0.24.2
+73 verbose addNamed "0.24.2" is a plain semver version for react-router-bootstrap
+74 silly cache afterAdd react-router-bootstrap@0.24.2
+75 verbose afterAdd /Users/Ashhad/.npm/react-router-bootstrap/0.24.2/package/package.json not in flight; writing
+76 verbose correctMkdir /Users/Ashhad/.npm correctMkdir not in flight; initializing
+77 verbose afterAdd /Users/Ashhad/.npm/react-router-bootstrap/0.24.2/package/package.json written
+78 silly install resolved [ { name: 'react-router-bootstrap',
+78 silly install resolved     version: '0.24.2',
+78 silly install resolved     description: 'Integration between React Router and React-Bootstrap',
+78 silly install resolved     files: [ 'lib' ],
+78 silly install resolved     main: './lib/index.js',
+78 silly install resolved     scripts:
+78 silly install resolved      { 'bower-prepare': 'babel-node scripts/bower-prepare.js',
+78 silly install resolved        build: 'rimraf lib && babel src -d lib && webpack && webpack -p && npm run bower-prepare',
+78 silly install resolved        lint: 'eslint scripts src test *.js',
+78 silly install resolved        release: 'release',
+78 silly install resolved        tdd: 'karma start',
+78 silly install resolved        test: 'npm run lint && karma start --single-run',
+78 silly install resolved        'visual-test': 'open http://localhost:8080/ && webpack-dev-server --config webpack.visual.config.babel.js' },
+78 silly install resolved     repository:
+78 silly install resolved      { type: 'git',
+78 silly install resolved        url: 'git+ssh://git@github.com/react-bootstrap/react-router-bootstrap.git' },
+78 silly install resolved     keywords: [ 'react', 'react-router', 'react-bootstrap' ],
+78 silly install resolved     author: { name: 'Matt Smith', email: 'mtscout6@gmail.com' },
+78 silly install resolved     license: 'Apache-2.0',
+78 silly install resolved     bugs: { url: 'https://github.com/react-bootstrap/react-router-bootstrap/issues' },
+78 silly install resolved     homepage: 'https://github.com/react-bootstrap/react-router-bootstrap',
+78 silly install resolved     peerDependencies: { react: '>=0.14.0', 'react-router-dom': '>=4.0.0' },
+78 silly install resolved     devDependencies:
+78 silly install resolved      { 'babel-cli': '^6.11.4',
+78 silly install resolved        'babel-core': '^6.11.4',
+78 silly install resolved        'babel-eslint': '^6.1.2',
+78 silly install resolved        'babel-loader': '^6.2.4',
+78 silly install resolved        'babel-plugin-add-module-exports': '^0.2.1',
+78 silly install resolved        'babel-preset-es2015': '^6.9.0',
+78 silly install resolved        'babel-preset-es2015-loose': '^7.0.0',
+78 silly install resolved        'babel-preset-react': '^6.11.1',
+78 silly install resolved        'babel-preset-stage-1': '^6.5.0',
+78 silly install resolved        'babel-register': '^6.11.5',
+78 silly install resolved        bootstrap: '^3.3.7',
+78 silly install resolved        chai: '^3.5.0',
+78 silly install resolved        colors: '^1.1.2',
+78 silly install resolved        'css-loader': '^0.23.1',
+78 silly install resolved        eslint: '^2.13.1',
+78 silly install resolved        'eslint-config-airbnb': '^9.0.1',
+78 silly install resolved        'eslint-plugin-babel': '^3.3.0',
+78 silly install resolved        'eslint-plugin-import': '^1.11.1',
+78 silly install resolved        'eslint-plugin-jsx-a11y': '^1.5.5',
+78 silly install resolved        'eslint-plugin-mocha': '^4.1.0',
+78 silly install resolved        'eslint-plugin-react': '^5.2.2',
+78 silly install resolved        'file-loader': '^0.9.0',
+78 silly install resolved        history: '^2.1.2',
+78 silly install resolved        'html-webpack-plugin': '^2.22.0',
+78 silly install resolved        karma: '^1.1.1',
+78 silly install resolved        'karma-chrome-launcher': '^1.0.1',
+78 silly install resolved        'karma-firefox-launcher': '^1.0.0',
+78 silly install resolved        'karma-mocha': '^1.1.1',
+78 silly install resolved        'karma-mocha-reporter': '^2.0.4',
+78 silly install resolved        'karma-sinon-chai': '^1.2.3',
+78 silly install resolved        'karma-sourcemap-loader': '^0.3.7',
+78 silly install resolved        'karma-webpack': '^1.7.0',
+78 silly install resolved        less: '^2.7.1',
+78 silly install resolved        'less-loader': '^2.2.3',
+78 silly install resolved        lodash: '^4.14.0',
+78 silly install resolved        mocha: '^2.5.3',
+78 silly install resolved        react: '^15.2.1',
+78 silly install resolved        'react-addons-test-utils': '^15.4.2',
+78 silly install resolved        'react-bootstrap': '^0.30.0',
+78 silly install resolved        'react-dom': '^15.2.1',
+78 silly install resolved        'react-router-dom': '^4.0.0',
+78 silly install resolved        'release-script': '^1.0.2',
+78 silly install resolved        rimraf: '^2.5.4',
+78 silly install resolved        shelljs: '^0.7.2',
+78 silly install resolved        sinon: '^1.17.4',
+78 silly install resolved        'sinon-chai': '^2.8.0',
+78 silly install resolved        'style-loader': '^0.13.1',
+78 silly install resolved        'url-loader': '^0.5.7',
+78 silly install resolved        webpack: '^1.13.1',
+78 silly install resolved        'webpack-dev-server': '^1.14.1',
+78 silly install resolved        yargs: '^4.8.1' },
+78 silly install resolved     'release-script': { bowerRepo: 'git@github.com:react-bootstrap/react-router-bootstrap-bower.git' },
+78 silly install resolved     dependencies: { 'prop-types': '^15.5.8' },
+78 silly install resolved     gitHead: 'c206ac1acd2573f974e5f9bdbc5e6b5b18f5f753',
+78 silly install resolved     _id: 'react-router-bootstrap@0.24.2',
+78 silly install resolved     _shasum: 'b99f5fcca812989d703eacbf400bed0529d040ab',
+78 silly install resolved     _from: 'react-router-bootstrap@latest',
+78 silly install resolved     _npmVersion: '4.4.4',
+78 silly install resolved     _nodeVersion: '7.8.0',
+78 silly install resolved     _npmUser: { name: 'taion', email: 'tesrin@gmail.com' },
+78 silly install resolved     dist:
+78 silly install resolved      { shasum: 'b99f5fcca812989d703eacbf400bed0529d040ab',
+78 silly install resolved        tarball: 'https://registry.npmjs.org/react-router-bootstrap/-/react-router-bootstrap-0.24.2.tgz' },
+78 silly install resolved     maintainers: [ [Object], [Object], [Object], [Object], [Object] ],
+78 silly install resolved     _npmOperationalInternal:
+78 silly install resolved      { host: 'packages-12-west.internal.npmjs.com',
+78 silly install resolved        tmp: 'tmp/react-router-bootstrap-0.24.2.tgz_1492611891547_0.47676473460160196' },
+78 silly install resolved     directories: {},
+78 silly install resolved     _resolved: 'https://registry.npmjs.org/react-router-bootstrap/-/react-router-bootstrap-0.24.2.tgz',
+78 silly install resolved     readme: 'ERROR: No README data found!' } ]
+79 info install react-router-bootstrap@0.24.2 into /Users/Ashhad/React/control_panel
+80 info installOne react-router-bootstrap@0.24.2
+81 verbose installOne of react-router-bootstrap to /Users/Ashhad/React/control_panel not in flight; installing
+82 verbose correctMkdir /Users/Ashhad/.npm/_locks correctMkdir not in flight; initializing
+83 verbose lock using /Users/Ashhad/.npm/_locks/react-router-bootstrap-437e9d240c090712.lock for /Users/Ashhad/React/control_panel/node_modules/react-router-bootstrap
+84 silly install write writing react-router-bootstrap 0.24.2 to /Users/Ashhad/React/control_panel/node_modules/react-router-bootstrap
+85 verbose unbuild node_modules/react-router-bootstrap
+86 silly gentlyRm /Users/Ashhad/React/control_panel/node_modules/react-router-bootstrap is being purged from base /Users/Ashhad/React/control_panel
+87 verbose gentlyRm don't care about contents; nuking /Users/Ashhad/React/control_panel/node_modules/react-router-bootstrap
+88 verbose tar unpack /Users/Ashhad/.npm/react-router-bootstrap/0.24.2/package.tgz
+89 verbose tar unpacking to /Users/Ashhad/React/control_panel/node_modules/react-router-bootstrap
+90 silly gentlyRm /Users/Ashhad/React/control_panel/node_modules/react-router-bootstrap is being purged
+91 verbose gentlyRm don't care about contents; nuking /Users/Ashhad/React/control_panel/node_modules/react-router-bootstrap
+92 silly gunzTarPerm modes [ '755', '644' ]
+93 silly gunzTarPerm extractEntry package.json
+94 silly gunzTarPerm extractEntry README.md
+95 silly gunzTarPerm extractEntry LICENSE
+96 silly gunzTarPerm extractEntry lib/IndexLinkContainer.js
+97 silly gunzTarPerm extractEntry lib/LinkContainer.js
+98 silly gunzTarPerm extractEntry lib/ReactRouterBootstrap.js
+99 silly gunzTarPerm extractEntry lib/ReactRouterBootstrap.min.js
+100 silly gunzTarPerm extractEntry lib/index.js
+101 silly gunzTarPerm extractEntry lib/ReactRouterBootstrap.min.js.map
+102 silly gunzTarPerm extractEntry CHANGELOG.md
+103 verbose write writing to /Users/Ashhad/React/control_panel/node_modules/react-router-bootstrap/package.json
+104 info preinstall react-router-bootstrap@0.24.2
+105 verbose readDependencies loading dependencies from /Users/Ashhad/React/control_panel/node_modules/react-router-bootstrap/package.json
+106 verbose readDependencies loading dependencies from /Users/Ashhad/React/control_panel/node_modules/react-router-bootstrap/package.json
+107 silly install resolved []
+108 verbose about to build /Users/Ashhad/React/control_panel/node_modules/react-router-bootstrap
+109 info build /Users/Ashhad/React/control_panel/node_modules/react-router-bootstrap
+110 info linkStuff react-router-bootstrap@0.24.2
+111 silly linkStuff react-router-bootstrap@0.24.2 has /Users/Ashhad/React/control_panel/node_modules as its parent node_modules
+112 verbose linkBins react-router-bootstrap@0.24.2
+113 verbose linkMans react-router-bootstrap@0.24.2
+114 verbose rebuildBundles react-router-bootstrap@0.24.2
+115 info install react-router-bootstrap@0.24.2
+116 info postinstall react-router-bootstrap@0.24.2
+117 verbose unlock done using /Users/Ashhad/.npm/_locks/react-router-bootstrap-437e9d240c090712.lock for /Users/Ashhad/React/control_panel/node_modules/react-router-bootstrap
+118 verbose validateInstall loading /Users/Ashhad/React/control_panel/package.json for validation
+119 warn unmet dependency /Users/Ashhad/React/control_panel/node_modules/react-redux requires hoist-non-react-statics@'^1.0.3' but will load
+119 warn unmet dependency /Users/Ashhad/React/control_panel/node_modules/hoist-non-react-statics,
+119 warn unmet dependency which is version 2.0.0
+120 warn unmet dependency /Users/Ashhad/React/control_panel/node_modules/react-redux requires lodash@'^4.2.0' but will load
+120 warn unmet dependency /Users/Ashhad/React/control_panel/node_modules/lodash,
+120 warn unmet dependency which is version 3.10.1
+121 warn unmet dependency /Users/Ashhad/React/control_panel/node_modules/redux requires lodash@'^4.2.1' but will load
+121 warn unmet dependency /Users/Ashhad/React/control_panel/node_modules/lodash,
+121 warn unmet dependency which is version 3.10.1
+122 verbose stack Error: The package webpack@3.0.0 does not satisfy its siblings' peerDependencies requirements!
+122 verbose stack     at /usr/local/lib/node_modules/npm/lib/install.js:125:32
+122 verbose stack     at /usr/local/lib/node_modules/npm/lib/install.js:268:7
+122 verbose stack     at /usr/local/lib/node_modules/npm/node_modules/read-installed/read-installed.js:142:5
+122 verbose stack     at /usr/local/lib/node_modules/npm/node_modules/read-installed/read-installed.js:263:14
+122 verbose stack     at cb (/usr/local/lib/node_modules/npm/node_modules/slide/lib/async-map.js:47:24)
+122 verbose stack     at /usr/local/lib/node_modules/npm/node_modules/read-installed/read-installed.js:263:14
+122 verbose stack     at cb (/usr/local/lib/node_modules/npm/node_modules/slide/lib/async-map.js:47:24)
+122 verbose stack     at /usr/local/lib/node_modules/npm/node_modules/read-installed/read-installed.js:263:14
+122 verbose stack     at cb (/usr/local/lib/node_modules/npm/node_modules/slide/lib/async-map.js:47:24)
+122 verbose stack     at /usr/local/lib/node_modules/npm/node_modules/read-installed/read-installed.js:263:14
+123 verbose cwd /Users/Ashhad/React/control_panel
+124 error Darwin 14.5.0
+125 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "install" "--save-dev" "react-router-bootstrap"
+126 error node v4.4.2
+127 error npm  v2.15.0
+128 error code EPEERINVALID
+129 error peerinvalid The package webpack@3.0.0 does not satisfy its siblings' peerDependencies requirements!
+129 error peerinvalid Peer babel-loader@5.4.2 wants webpack@1 || 2 || ^2.1.0-beta
+130 verbose exit [ 1, true ]

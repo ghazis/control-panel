@@ -1,7 +1,6 @@
 var path = require("path");
 var webpack = require("webpack");
 var nodePath = path.join(__dirname, "node_modules");
-var html_loader = require("html-loader");
 
 module.exports = {
 

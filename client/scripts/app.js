@@ -3,6 +3,7 @@ import Header from './components/header';
 import Routes from './components/routes';
 import { Link } from 'react-router-dom';
 import { Nav , NavItem} from 'react-bootstrap';
+import { LinkContainer } from 'react-router-bootstrap';
 
 
 class App extends Component {
@@ -12,9 +13,9 @@ class App extends Component {
     return (
     	<div>
 			<Nav bsStyle="tabs">
-				<NavItem eventKey="1"><Link to="/">Home</Link></NavItem>
-				<NavItem eventKey="2"><Link to="/car">Car</Link></NavItem>
-				<NavItem eventKey="3"><Link to="/therm">Therm</Link></NavItem>
+				<LinkContainer to="/"><NavItem eventKey="1">Home</NavItem></LinkContainer>
+				<LinkContainer to="/car"><NavItem eventKey="2">Car</NavItem></LinkContainer>
+				<LinkContainer to="/therm"><NavItem eventKey="3">Therm</NavItem></LinkContainer>
 			</Nav>
       		{Routes}
        	</div>
