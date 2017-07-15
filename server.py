@@ -3,6 +3,7 @@ import subprocess
 from flask import *
 from os import path
 from cmd_sender import send_cmd
+from state import get_status
 
 # Local predicition modules
 # find modules in parent_folder/predictions
@@ -10,6 +11,9 @@ from cmd_sender import send_cmd
 
 static_assets_path = path.join(path.dirname(__file__), "dist")
 app = Flask(__name__, static_folder=static_assets_path)
+
+def _get_state():
+	return get_status()
 
 def _cmd(cmd):
 	return send_cmd(cmd)
@@ -20,6 +24,10 @@ def _cmd(cmd):
 @app.route('/<path:path>')
 def catch_all(path):
     return app.send_static_file("index.html")
+
+@app.route('/get_state')
+def get_state():
+   	return _get_state()
 
 @app.route('/cmd')
 def cmd():

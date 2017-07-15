@@ -2,9 +2,13 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Button } from 'react-bootstrap';
 import { runScript } from '../../actions/buttons';
+import { get_state } from '../../actions/buttons';
 
 class AcButton extends Component {
 
+	componentDidMount() {
+		this.props.get_state();
+	}
 
 	render() {
 		return (
@@ -23,7 +27,8 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        runScript: (url, cmd, name) => dispatch(runScript(url, cmd, name))
+        runScript: (url, cmd, name) => dispatch(runScript(url, cmd, name)),
+        get_state: () => dispatch(get_state())
     };
 };
 
