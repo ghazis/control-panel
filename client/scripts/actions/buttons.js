@@ -1,6 +1,7 @@
-export function init() {
+export function setTemp(temp) {
     return {
-        type: 'INIT'
+        type: 'SET_TEMP',
+        temp: temp
     }
 }
 
@@ -16,7 +17,7 @@ export function buttonToggleOff(name) {
     };
 }
 
-export function setState(dispatch, ac_state, heat_state) {
+export function setState(dispatch, ac_state, heat_state, temp) {
     if (ac_state == 1) {
         dispatch(buttonToggleOn('AC'));
     } else if (heat_state == 1) {
@@ -25,6 +26,7 @@ export function setState(dispatch, ac_state, heat_state) {
         dispatch(buttonToggleOff('AC'));
         dispatch(buttonToggleOff('HEAT'));
     }
+    dispatch(setTemp(temp));
 }
 
 export function get_state() {
@@ -38,7 +40,7 @@ export function get_state() {
                 return response;
             })
             .then((response) => response.json())
-            .then((res) => setState(dispatch, res[0].ac, res[0].heat))
+            .then((res) => setState(dispatch, res[0].ac, res[0].heat, res[0].temp))
     };
 }
 

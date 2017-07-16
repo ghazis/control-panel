@@ -7,7 +7,7 @@ import { get_state } from '../../actions/buttons';
 class AcButton extends Component {
 
 	componentDidMount() {
-		this.props.get_state();
+		setInterval(() => this.props.get_state(), 3000);
 	}
 
 	render() {

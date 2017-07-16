@@ -27,6 +27,7 @@ class ThermTable extends Component {
           </tr>
         </tbody>
       </Table>
+      <h1>{this.props.buttonData.temp}</h1>
       </div>
     );
   }

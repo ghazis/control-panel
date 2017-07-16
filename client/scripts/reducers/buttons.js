@@ -3,6 +3,11 @@ import { fan_off, fan_on, heater_off, heater_on, tv_off, tv_on } from '../compon
 
 export function buttonToggle(state = InitialButtonsState, action) {
     switch (action.type) {
+        case 'SET_TEMP':
+            return {
+                ...state,
+                    temp: action.temp
+            }
         case 'BUTTON_TOGGLE_ON_SW01':
             return {
                 ...state,

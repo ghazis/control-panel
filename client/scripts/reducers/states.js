@@ -66,7 +66,8 @@ export const heatStateOff = {
                     cmd: '_on',
                     classname: 'btn-danger',
                     img: heat_off
-                }                
+                }
+                                
 
 export const InitialButtonsState = {
     sw01: swStateOff,
