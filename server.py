@@ -3,7 +3,7 @@ import subprocess
 from flask import *
 from os import path
 from cmd_sender import send_cmd
-from state import get_status
+#from state import get_status
 
 # Local predicition modules
 # find modules in parent_folder/predictions
@@ -13,8 +13,8 @@ static_assets_path = path.join(path.dirname(__file__), "dist")
 app = Flask(__name__, static_folder=static_assets_path)
 
 def _get_state():
-	return get_status()
-
+	#return get_status()
+	return json.dumps([{'success':True}]), 200, {'ContentType':'application/json'}
 def _cmd(cmd):
 	return send_cmd(cmd)
 

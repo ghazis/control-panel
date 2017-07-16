@@ -7,7 +7,12 @@ import { get_state } from '../../actions/buttons';
 class AcButton extends Component {
 
 	componentDidMount() {
-		setInterval(() => this.props.get_state(), 3000);
+		const intervalID = setInterval(() => this.props.get_state(), 10000);
+		this.setState({intervalID: intervalID});
+	}
+
+	componentWillUnmount() {
+		clearInterval(this.state.intervalID);
 	}
 
 	render() {
