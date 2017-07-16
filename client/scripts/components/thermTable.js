@@ -8,7 +8,6 @@ class ThermTable extends Component {
   render () {
     return (
       <div>
-      {this.props.myprop}
       <Table responsive>
         <thead>
           <tr>
@@ -18,16 +17,19 @@ class ThermTable extends Component {
         </thead>
         <tbody>
           <tr>
+            <td><h1>Temp</h1></td>
+            <td><h1>74.536</h1></td>
+          </tr>
+          <tr>
             <td><AcButton /></td>
-            <td><img src={this.props.buttonData.ac.img} style={{ width: 200 }}></img></td>
+            <td><img src={this.props.buttonData.ac.img} style={{ width: 100 }}></img></td>
           </tr>
           <tr>
             <td><HeatButton /></td>
-            <td><img src={this.props.buttonData.heat.img} style={{ width: 50 }}></img></td>
+            <td><img src={this.props.buttonData.heat.img} style={{ width: 100 }}></img></td>
           </tr>
         </tbody>
       </Table>
-      <h1>{this.props.buttonData.temp}</h1>
       </div>
     );
   }

@@ -6,7 +6,7 @@ import ThermTable from './thermTable';
 
 export default (
       <Switch>
-        <Route exact path='/' component={HomeTable} />
+        <Route exact path='/home' component={HomeTable} />
         <Route path='/car' component={CarTable} />
         <Route path='/therm' component={ThermTable} />
       </Switch>

@@ -10,10 +10,11 @@ import car_off from './car_off.png';
 import car_on from './car_on.gif';
 import lock_off from './lock_off.png';
 import lock_on from './lock_on.png';
-import ac_off from './ac_off.png';
-import ac_on from './ac_on.gif';
-import heat_off from './heat_off.png';
-import heat_on from './heat_on.gif';
+import ac_off from './not_running.png';
+import ac_on from './running.png';
+import heat_off from './not_running.png';
+import heat_on from './running.png';
+import backgrnd from './backgrnd.jpg';
 
 export {
 	lb_off,
@@ -31,5 +32,6 @@ export {
 	ac_off,
 	ac_on,
 	heat_off,
-	heat_on
+	heat_on,
+	backgrnd
 }

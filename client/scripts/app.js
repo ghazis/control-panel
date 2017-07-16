@@ -13,7 +13,7 @@ class App extends Component {
     return (
     	<div>
 			<Nav bsStyle="tabs">
-				<LinkContainer to="/"><NavItem eventKey="1">Home</NavItem></LinkContainer>
+				<LinkContainer to="/home"><NavItem eventKey="1">Home</NavItem></LinkContainer>
 				<LinkContainer to="/car"><NavItem eventKey="2">Car</NavItem></LinkContainer>
 				<LinkContainer to="/therm"><NavItem eventKey="3">Therm</NavItem></LinkContainer>
 			</Nav>
