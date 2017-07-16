@@ -22,11 +22,11 @@ class ThermTable extends Component {
           </tr>
           <tr>
             <td><AcButton /></td>
-            <td><img src={this.props.buttonData.ac.img} style={{ width: 100 }}></img></td>
+            <td><img src={this.props.buttonData.ac.img} style={{ width: 80 }}></img></td>
           </tr>
           <tr>
             <td><HeatButton /></td>
-            <td><img src={this.props.buttonData.heat.img} style={{ width: 100 }}></img></td>
+            <td><img src={this.props.buttonData.heat.img} style={{ width: 80 }}></img></td>
           </tr>
         </tbody>
       </Table>
