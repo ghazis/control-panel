@@ -4,13 +4,14 @@ import Routes from './components/routes';
 import { Link } from 'react-router-dom';
 import { Nav , NavItem} from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap';
-
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 
 class App extends Component {
 
 
   render() {
     return (
+      <MuiThemeProvider>
     	<div>
 			<Nav bsStyle="tabs">
 				<LinkContainer to="/home"><NavItem eventKey="1">Home</NavItem></LinkContainer>
@@ -19,6 +20,7 @@ class App extends Component {
 			</Nav>
       		{Routes}
        	</div>
+        </MuiThemeProvider>
     );
   }
 }

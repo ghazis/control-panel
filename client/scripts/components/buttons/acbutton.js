@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { Button } from 'react-bootstrap';
+import Toggle from 'material-ui/Toggle';
 import { runScript } from '../../actions/buttons';
 import { get_state } from '../../actions/buttons';
 
 class AcButton extends Component {
 
 	componentDidMount() {
-		const intervalID = setInterval(() => this.props.get_state(), 10000);
+		const intervalID = setInterval(() => this.props.get_state(), 15000);
 		this.setState({intervalID: intervalID});
 	}
 
@@ -18,7 +18,7 @@ class AcButton extends Component {
 	render() {
 		return (
 			<div>
-				<Button className={this.props.buttonData.classname} onClick={() => {this.props.runScript('http://73.209.181.138:7000/cmd?cmd=ac'+ this.props.buttonData.cmd, this.props.buttonData.cmd, 'AC')}}>{this.props.buttonData.name}</Button>
+				<Toggle label="AC" toggled={this.props.buttonData.toggled} labelPosition="right" style={{marginBottom: 16}} onToggle={() => {this.props.runScript('http://73.209.181.138:7000/cmd?cmd=ac'+ this.props.buttonData.cmd, this.props.buttonData.cmd, 'AC')}}/>
 			</div>
 		)
 }

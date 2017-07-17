@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { Button } from 'react-bootstrap';
+import Toggle from 'material-ui/Toggle';
 import { runScript } from '../../actions/buttons';
 
 class HeatButton extends Component {
@@ -9,7 +9,7 @@ class HeatButton extends Component {
 	render() {
 		return (
 			<div>
-				<Button className={this.props.buttonData.classname} onClick={() => {this.props.runScript('http://73.209.181.138:7000/cmd?cmd=heat'+ this.props.buttonData.cmd, this.props.buttonData.cmd, 'HEAT')}}>{this.props.buttonData.name}</Button>
+				<Toggle label="Heat" toggled={this.props.buttonData.toggled} labelPosition="right" style={{marginBottom: 16}} onToggle={() => {this.props.runScript('http://73.209.181.138:7000/cmd?cmd=heat'+ this.props.buttonData.cmd, this.props.buttonData.cmd, 'HEAT')}}/>
 			</div>
 		)
 }

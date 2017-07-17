@@ -18,7 +18,7 @@ class ThermTable extends Component {
         <tbody>
           <tr>
             <td><h1>Temp</h1></td>
-            <td><h1>74.536</h1></td>
+            <td><h1>{this.props.buttonData.temp}</h1></td>
           </tr>
           <tr>
             <td><AcButton /></td>

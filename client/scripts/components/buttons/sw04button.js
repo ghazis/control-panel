@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { Button } from 'react-bootstrap';
+import Toggle from 'material-ui/Toggle';
 import { runScript } from '../../actions/buttons';
 
 class SW04Button extends Component {
@@ -12,7 +12,7 @@ class SW04Button extends Component {
 
 		return (
 			<div>
-				<Button className={this.props.buttonData.classname} onClick={() => {this.props.runScript('http://73.209.181.138:7000/cmd?cmd=sw04'+ this.props.buttonData.cmd, this.props.buttonData.cmd, 'SW04')}}>{this.props.buttonData.name} {sw_device_name}</Button>
+				<Toggle label={sw_device_name} toggled={this.props.buttonData.toggle} labelPosition="right" style={{marginBottom: 16}} onToggle={() => {this.props.runScript('http://73.209.181.138:7000/cmd?cmd=sw04'+ this.props.buttonData.cmd, this.props.buttonData.cmd, 'SW04')}}/>
 			</div>
 		)
 }

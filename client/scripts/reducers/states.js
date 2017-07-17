@@ -4,68 +4,80 @@ export const swStateOn = {
                     name: 'Turn Off',
                     cmd: '_off',
                     classname: 'btn-danger',
-                    img: lb_on
+                    img: lb_on,
+                    toggled: true
                 }
 
 export const swStateOff = {
                     name: 'Turn On',
                     cmd: '_on',
                     classname: 'btn-success',
-                    img: lb_off
+                    img: lb_off,
+                    toggled: false
                 }
 
 export const carStateOn = {
                     name: 'Stop Car',
                     cmd: '_off',
                     classname: 'btn-danger',
-                    img: car_on
+                    img: car_on,
+                    toggled: true
                 }
 
 export const carStateOff = {
                     name: 'Start Car',
                     cmd: '_on',
                     classname: 'btn-success',
-                    img: car_off
+                    img: car_off,
+                    toggled: false
                 }
 
 export const carLockStateOn = {
                     name: 'Unlock Car',
                     cmd: '_off',
                     classname: 'btn-danger',
-                    img: lock_on
+                    img: lock_on,
+                    toggled: true
                 }
 
 export const carLockStateOff = {
                     name: 'Lock Car',
                     cmd: '_on',
                     classname: 'btn-success',
-                    img: lock_off
+                    img: lock_off,
+                    toggled: false
                 }
+                
 export const acStateOn = {
                     name: 'AC On',
                     cmd: '_off',
                     classname: 'btn-success',
-                    img: ac_on
+                    img: ac_on,
+                    toggled: true
                 }
 
 export const acStateOff = {
                     name: 'AC Off',
                     cmd: '_on',
                     classname: 'btn-danger',
-                    img: ac_off
+                    img: ac_off,
+                    toggled: false
                 }
+
 export const heatStateOn = {
                     name: 'Heat On',
                     cmd: '_off',
                     classname: 'btn-success',
-                    img: heat_on
+                    img: heat_on,
+                    toggled: true
                 }
 
 export const heatStateOff = {
                     name: 'Heat Off',
                     cmd: '_on',
                     classname: 'btn-danger',
-                    img: heat_off
+                    img: heat_off,
+                    toggled: false
                 }
                                 
 
