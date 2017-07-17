@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { SW01, SW02, SW03, SW04, SW05, StartCarButton, LockCarButton } from './buttons';
+import { SW01, SW02, SW03, SW04, SW05, StartCarButton, LockCarButton } from '../buttons';
 import { Table } from 'react-bootstrap';
 import { connect } from 'react-redux';
 

@@ -5,6 +5,18 @@ export function setTemp(temp) {
     }
 }
 
+export function disableToggle(){
+    return{
+        type: 'DISABLE_TOGGLE'
+    }
+}
+
+export function enableToggle(){
+    return{
+        type: 'ENABLE_TOGGLE'
+    }
+}
+
 export function buttonToggleOn(name) {
     return {
         type: 'BUTTON_TOGGLE_ON_' + name
@@ -49,6 +61,8 @@ export function runScript(url, cmd, name) {
         fetch(url);
         if (cmd == '_on') {
             dispatch(buttonToggleOn(name));
+            dispatch(disableToggle());
+            setTimeout(() => dispatch(enableToggle()), 3000);
         } else {
             dispatch(buttonToggleOff(name));
         }

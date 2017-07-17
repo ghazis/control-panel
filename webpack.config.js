@@ -5,6 +5,10 @@ module.exports = {
     filename: "app.js",
     publicPath: "/static/"
   },
+    devServer: {
+    port: 7000,
+    historyApiFallback: true
+  },
   module: {
     loaders: [
       {

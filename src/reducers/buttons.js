@@ -8,6 +8,16 @@ export function buttonToggle(state = InitialButtonsState, action) {
                 ...state,
                     temp: action.temp
             }
+        case 'DISABLE_TOGGLE':
+            return {
+                ...state,
+                    toggle_disabled: true
+            }
+        case 'ENABLE_TOGGLE':
+            return {
+                ...state,
+                    toggle_disabled: false
+            }
         case 'BUTTON_TOGGLE_ON_SW01':
             return {
                 ...state,

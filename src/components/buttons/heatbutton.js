@@ -9,7 +9,7 @@ class HeatButton extends Component {
 	render() {
 		return (
 			<div>
-				<Toggle label="Heat" toggled={this.props.buttonData.toggled} labelPosition="right" style={{marginBottom: 16}} onToggle={() => {this.props.runScript('http://73.209.181.138:7000/cmd?cmd=heat'+ this.props.buttonData.cmd, this.props.buttonData.cmd, 'HEAT')}}/>
+				<Toggle label="Heat" disabled={this.props.disable_toggle} toggled={this.props.buttonData.toggled} labelPosition="right" style={{marginBottom: 16}} onToggle={() => {this.props.runScript('http://73.209.181.138:7000/cmd?cmd=heat'+ this.props.buttonData.cmd, this.props.buttonData.cmd, 'HEAT')}}/>
 			</div>
 		)
 }
@@ -17,7 +17,8 @@ class HeatButton extends Component {
 
 const mapStateToProps = (state) => {
     return {
-    	buttonData: state.buttonToggle.heat
+    	buttonData: state.buttonToggle.heat,
+    	disable_toggle: state.buttonToggle.toggle_disabled
     };
 };
 

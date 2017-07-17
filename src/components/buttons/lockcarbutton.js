@@ -9,7 +9,7 @@ class LockCarButton extends Component {
 	render() {
 		return (
 			<div>
-				<Toggle label="Lock Car" toggled={this.props.buttonData.toggle} labelPosition="right" style={{marginBottom: 16}} onToggle={() => {this.props.runScript('http://73.209.181.138:7000/cmd?cmd=lock'+ this.props.buttonData.cmd, this.props.buttonData.cmd, 'CAR_LOCK')}}/>
+				<Toggle label="Lock Car" disabled={this.props.disable_toggle} toggled={this.props.buttonData.toggled} labelPosition="right" style={{marginBottom: 16}} onToggle={() => {this.props.runScript('http://73.209.181.138:7000/cmd?cmd=lock'+ this.props.buttonData.cmd, this.props.buttonData.cmd, 'CAR_LOCK')}}/>
 			</div>
 		)
 }
@@ -17,7 +17,8 @@ class LockCarButton extends Component {
 
 const mapStateToProps = (state) => {
     return {
-    	buttonData: state.buttonToggle.car_lock
+    	buttonData: state.buttonToggle.car_lock,
+    	disable_toggle: state.buttonToggle.toggle_disabled
     };
 };
 

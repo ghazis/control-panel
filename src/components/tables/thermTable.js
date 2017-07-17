@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { AcButton, HeatButton } from './buttons';
+import { AcButton, HeatButton } from '../buttons';
 import { Table } from 'react-bootstrap';
 import { connect } from 'react-redux';
 
