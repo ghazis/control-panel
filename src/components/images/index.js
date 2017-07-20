@@ -14,7 +14,8 @@ import ac_off from './not_running.png';
 import ac_on from './running.png';
 import heat_off from './not_running.png';
 import heat_on from './running.png';
-import backgrnd from './backgrnd.jpg';
+import auto_off from './not_running.png';
+import auto_on from './running.png';
 
 export {
 	lb_off,
@@ -33,5 +34,6 @@ export {
 	ac_on,
 	heat_off,
 	heat_on,
-	backgrnd
+	auto_off,
+	auto_on
 }

@@ -3,13 +3,15 @@ import { connect } from 'react-redux';
 import Toggle from 'material-ui/Toggle';
 import { setThermState } from '../../actions/buttons';
 
-class HeatButton extends Component {
-
+class AutoButton extends Component {
 
 	render() {
+
+		const sw_device_name = 'Dining Room Lights';
+
 		return (
 			<div>
-				<Toggle label="Heat" disabled={this.props.buttonData.disable} toggled={this.props.buttonData.toggled} labelPosition="right" style={{marginBottom: 16}} onToggle={() => {this.props.setThermState('http://73.209.181.138:7000/cmd?cmd=heat'+ this.props.buttonData.cmd, this.props.buttonData.cmd, 'HEAT')}}/>
+				<Toggle label="Auto" disabled={false} toggled={this.props.toggled} labelPosition="right" style={{marginBottom: 16}} onToggle={() => {this.props.setThermState('http://73.209.181.138:7000/cmd?cmd=auto'+ this.props.buttonData.cmd, this.props.buttonData.cmd, 'AUTO')}}/>
 			</div>
 		)
 }
@@ -17,7 +19,8 @@ class HeatButton extends Component {
 
 const mapStateToProps = (state) => {
     return {
-    	buttonData: state.buttonToggle.heat
+    	buttonData: state.buttonToggle.auto,
+    	toggled: state.buttonToggle.auto.toggled
     };
 };
 
@@ -28,4 +31,4 @@ const mapDispatchToProps = (dispatch) => {
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)
-(HeatButton);
+(AutoButton);

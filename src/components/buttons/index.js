@@ -7,6 +7,10 @@ import StartCarButton from './startcarbutton';
 import LockCarButton from './lockcarbutton';
 import AcButton from './acbutton';
 import HeatButton from './heatbutton';
+import AutoButton from './autoButton';
+import IncTempButton from './incTempButton';
+import DecTempButton from './decTempButton';
+
 
 export {
 	SW01,
@@ -17,5 +21,8 @@ export {
 	StartCarButton,
 	LockCarButton,
 	AcButton,
-	HeatButton
+	HeatButton,
+	AutoButton,
+	IncTempButton,
+	DecTempButton
 }

@@ -1,4 +1,4 @@
-import { lb_off, lb_on, fan_off, fan_on, heater_off, heater_on, tv_on, tv_off, car_off, car_on, lock_off, lock_on, ac_off, ac_on, heat_off, heat_on } from '../components/images';
+import { lb_off, lb_on, fan_off, fan_on, heater_off, heater_on, tv_on, tv_off, car_off, car_on, lock_off, lock_on, ac_off, ac_on, heat_off, heat_on, auto_off, auto_on } from '../components/images';
 
 export const swStateOn = {
                     name: 'Turn Off',
@@ -79,6 +79,22 @@ export const heatStateOff = {
                     img: heat_off,
                     toggled: false
                 }
+
+export const autoStateOn = {
+                    name: 'Auto On',
+                    cmd: '_off',
+                    classname: 'btn-success',
+                    img: auto_on,
+                    toggled: true
+                }
+
+export const autoStateOff = {
+                    name: 'Auto Off',
+                    cmd: '_on',
+                    classname: 'btn-danger',
+                    img: auto_off,
+                    toggled: false
+                }
                                 
 
 export const InitialButtonsState = {
@@ -90,5 +106,8 @@ export const InitialButtonsState = {
     car: carStateOff,
     car_lock: carLockStateOff,
     ac: acStateOff,
-    heat: heatStateOff
+    heat: heatStateOff,
+    auto: autoStateOff,
+    current_temp: '75.000F',
+    desired_temp: 75
 }

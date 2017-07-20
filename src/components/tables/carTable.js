@@ -6,9 +6,9 @@ import { connect } from 'react-redux';
 class CarTable extends Component {
 
   render () {
+
     return (
       <div>
-      {this.props.myprop}
       <Table responsive>
         <thead>
           <tr>

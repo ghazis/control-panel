@@ -3,7 +3,7 @@ import subprocess
 from flask import *
 from os import path
 from cmd_sender import send_cmd
-#from state import get_status
+from temp import get_current_temp
 
 # Local predicition modules
 # find modules in parent_folder/predictions
@@ -12,9 +12,9 @@ from cmd_sender import send_cmd
 static_assets_path = path.join(path.dirname(__file__), "dist")
 app = Flask(__name__, static_folder=static_assets_path)
 
-def _get_state():
-	#return get_status()
-	return json.dumps([{'success':True}]), 200, {'ContentType':'application/json'}
+def _get_temp():
+	return get_current_temp()
+
 def _cmd(cmd):
 	return send_cmd(cmd)
 
@@ -25,14 +25,14 @@ def _cmd(cmd):
 def catch_all(path):
     return app.send_static_file("index.html")
 
-@app.route('/get_state')
-def get_state():
-   	return _get_state()
+@app.route('/get_temp')
+def get_temp():
+   	return _get_temp()
 
 @app.route('/cmd')
 def cmd():
-	cmd = request.args.get('cmd')
-   	return _cmd(cmd)
+  cmd = request.args.get('cmd')
+  return _cmd(cmd)
 
 if __name__ == "__main__":
     # Make sure all frontend assets are compiled

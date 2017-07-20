@@ -1,12 +1,17 @@
-import { InitialButtonsState, swStateOn, swStateOff, carStateOn, carStateOff, carLockStateOn, carLockStateOff, acStateOn, acStateOff, heatStateOn, heatStateOff } from './states';
+import { InitialButtonsState, swStateOn, swStateOff, carStateOn, carStateOff, carLockStateOn, carLockStateOff, acStateOn, acStateOff, heatStateOn, heatStateOff, autoStateOn, autoStateOff } from './states';
 import { fan_off, fan_on, heater_off, heater_on, tv_off, tv_on } from '../components/images';
 
 export function buttonToggle(state = InitialButtonsState, action) {
     switch (action.type) {
-        case 'SET_TEMP':
+        case 'SET_CURRENT_TEMP':
             return {
                 ...state,
-                    temp: action.temp
+                    current_temp: action.current_temp
+            }
+        case 'SET_DESIRED_TEMP':
+            return {
+                ...state,
+                    desired_temp: action.desired_temp
             }
         case 'DISABLE_TOGGLE':
             return {
@@ -92,7 +97,8 @@ export function buttonToggle(state = InitialButtonsState, action) {
             return {
                 ...state,
                     ac: acStateOn,
-                    heat: heatStateOff
+                    heat: heatStateOff,
+                    auto: autoStateOff
             }
         case 'BUTTON_TOGGLE_OFF_AC':
             return {
@@ -103,12 +109,25 @@ export function buttonToggle(state = InitialButtonsState, action) {
             return {
                 ...state,
                     heat: heatStateOn,
-                    ac: acStateOff
+                    ac: acStateOff,
+                    auto: autoStateOff
             }
         case 'BUTTON_TOGGLE_OFF_HEAT':
             return {
                 ...state,
                     heat: heatStateOff
+            }
+        case 'BUTTON_TOGGLE_ON_AUTO':
+            return {
+                ...state,
+                    auto: autoStateOn,
+                    ac: acStateOff,
+                    heat: heatStateOff
+            }
+        case 'BUTTON_TOGGLE_OFF_AUTO':
+            return {
+                ...state,
+                    auto: autoStateOff
             }
         default:
             return state;

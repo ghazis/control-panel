@@ -2,8 +2,13 @@ import React, { Component } from 'react';
 import { SW01, SW02, SW03, SW04, SW05, StartCarButton, LockCarButton } from '../buttons';
 import { Table } from 'react-bootstrap';
 import { connect } from 'react-redux';
+import { swStateListener } from '../../actions/buttons';
 
 class HomeTable extends Component {
+
+  componentWillMount() {
+    this.props.swStateListener();
+  }
 
   render () {
     return (
@@ -49,5 +54,11 @@ const mapStateToProps = (state) => {
     };
 };
 
-export default connect(mapStateToProps)
+const mapDispatchToProps = (dispatch) => {
+    return {
+        swStateListener: () => dispatch(swStateListener())
+    };
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)
 (HomeTable);
