@@ -12,7 +12,7 @@ class SW04Button extends Component {
 
 		return (
 			<div>
-				<Toggle label={sw_device_name} toggled={this.props.buttonData.toggled} labelPosition="right" style={{marginBottom: 16}} onToggle={() => {this.props.setSwState('http://73.209.181.138:7000/cmd?cmd=sw04'+ this.props.buttonData.cmd, this.props.buttonData.cmd, 'SW04')}}/>
+				<Toggle label={sw_device_name} toggled={this.props.buttonData.toggled} labelPosition="right" style={{marginBottom: 16}} onToggle={() => {this.props.setSwState('http://73.209.181.138/cmd?cmd=sw04'+ this.props.buttonData.cmd, this.props.buttonData.cmd, 'SW04')}}/>
 			</div>
 		)
 }

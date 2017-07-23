@@ -8,7 +8,7 @@ class AcButton extends Component {
 	render() {
 		return (
 			<div>
-				<Toggle label="AC" disabled={this.props.buttonData.disable} toggled={this.props.buttonData.toggled} labelPosition="right" style={{marginBottom: 16}} onToggle={() => {this.props.setThermState('http://73.209.181.138:7000/cmd?cmd=ac'+ this.props.buttonData.cmd, this.props.buttonData.cmd, 'AC')}}/>
+				<Toggle label="AC" disabled={this.props.buttonData.disable} toggled={this.props.buttonData.toggled} labelPosition="right" style={{marginBottom: 16}} onToggle={() => {this.props.setThermState('http://73.209.181.138/cmd?cmd=ac'+ this.props.buttonData.cmd, this.props.buttonData.cmd, 'AC')}}/>
 			</div>
 		)
 }

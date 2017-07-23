@@ -100,7 +100,7 @@ export function swStateListener() {
 
 export function getCurrentTemp() {
     return (dispatch, getState) => {
-        fetch('http://73.209.181.138:7000/get_temp')
+        fetch('http://73.209.181.138/get_temp')
             .then((response) => {
                 if (!response.ok) {
                     throw Error(response.statusText);
@@ -136,18 +136,18 @@ export function runAutoMode(name) {
         if (cmd == '_on') {
             if (current_temp > desired_temp){
                 dispatch(buttonToggleOn(name, 'AC'));
-                fetch('http://73.209.181.138:7000/set_auto_state?auto_state=1');
+                fetch('http://73.209.181.138/set_auto_state?auto_state=1');
                 const auto_type = getState().buttonToggle.auto_type;
                 console.log(auto_type);
             } else if (current_temp < desired_temp) {
                 dispatch(buttonToggleOn(name, 'HEAT'));
-                fetch('http://73.209.181.138:7000/set_auto_state?auto_state=1');
+                fetch('http://73.209.181.138/set_auto_state?auto_state=1');
                 const auto_type = getState().buttonToggle.auto_type;
                 console.log(auto_type);     
             }
         } else {
             dispatch(buttonToggleOff(name));
-            fetch('http://73.209.181.138:7000/set_auto_state?auto_state=0')
+            fetch('http://73.209.181.138/set_auto_state?auto_state=0')
             const auto_type = getState().buttonToggle.auto_type;
             console.log(auto_type);
         }

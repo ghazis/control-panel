@@ -9,7 +9,7 @@ class HeatButton extends Component {
 	render() {
 		return (
 			<div>
-				<Toggle label="Heat" disabled={this.props.buttonData.disable} toggled={this.props.buttonData.toggled} labelPosition="right" style={{marginBottom: 16}} onToggle={() => {this.props.setThermState('http://73.209.181.138:7000/cmd?cmd=heat'+ this.props.buttonData.cmd, this.props.buttonData.cmd, 'HEAT')}}/>
+				<Toggle label="Heat" disabled={this.props.buttonData.disable} toggled={this.props.buttonData.toggled} labelPosition="right" style={{marginBottom: 16}} onToggle={() => {this.props.setThermState('http://73.209.181.138/cmd?cmd=heat'+ this.props.buttonData.cmd, this.props.buttonData.cmd, 'HEAT')}}/>
 			</div>
 		)
 }

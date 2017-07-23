@@ -11,7 +11,7 @@ class AutoButton extends Component {
 
 		return (
 			<div>
-				<Toggle label="Auto" disabled={false} toggled={this.props.toggled} labelPosition="right" style={{marginBottom: 16}} onToggle={() => {this.props.setThermState('http://73.209.181.138:7000/cmd?cmd=auto'+ this.props.buttonData.cmd, this.props.buttonData.cmd, 'AUTO')}}/>
+				<Toggle label="Auto" disabled={false} toggled={this.props.toggled} labelPosition="right" style={{marginBottom: 16}} onToggle={() => {this.props.setThermState('http://73.209.181.138/cmd?cmd=auto'+ this.props.buttonData.cmd, this.props.buttonData.cmd, 'AUTO')}}/>
 			</div>
 		)
 }
