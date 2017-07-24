@@ -10,7 +10,7 @@ class IncTempToggle extends Component {
 	render() {
 		return (
 			<div>
-                <FloatingActionButton onTouchTap={() => {this.props.incrementTemp(this.props.thermState.desired_temp+1)}} style={{ marginTop: 40, marginLeft: 350}}>
+                <FloatingActionButton onTouchTap={() => {this.props.incrementTemp(this.props.thermState.desired_temp+1)}} style={{ marginTop: 40, marginLeft: 340}}>
                   <Add />
                 </FloatingActionButton>
 			</div>

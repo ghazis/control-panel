@@ -16,8 +16,8 @@ class HomeTable extends Component {
       <Table responsive>
         <thead>
           <tr>
-            <th>Controls</th>
-            <th>Status</th>
+            <th style={{fontSize: 30}}>Controls</th>
+            <th style={{fontSize: 30}}>Status</th>
           </tr>
         </thead>
         <tbody>

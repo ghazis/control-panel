@@ -29,14 +29,14 @@ class ThermTable extends Component {
       <Table responsive>
         <thead>
           <tr>
-            <th>Controls</th>
-            <th>Status</th>
+            <th style={{fontSize: 30}}>Controls</th>
+            <th style={{fontSize: 30}}>Status</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td><h3>Temp</h3></td>
-            <td><h3>{this.props.thermState.current_temp}</h3></td>
+            <td><h1>Temp</h1></td>
+            <td><h1>{this.props.thermState.current_temp}</h1></td>
           </tr>
           <tr>
             <td><AcToggle /></td>
@@ -48,17 +48,17 @@ class ThermTable extends Component {
           </tr>
         </tbody>
       </Table>
-      <h2 className="text-center" style={{marginTop: 30}}>Set Temperature</h2>
+      <h1 className="text-center" style={{marginTop: 30}}>Set Temperature</h1>
       <Col sm={1}>
         <DecTempToggle />
       </Col>
       <Col sm={1}>
-        <h2 style={{marginTop: 50, marginLeft: 360}}>{this.props.thermState.desired_temp}F</h2>
+        <h1 style={{marginTop: 50, marginLeft: 350}}>{this.props.thermState.desired_temp}F</h1>
       </Col>
       <Col sm={1}>
         <IncTempToggle />
       </Col>
-      <h2 className="text-center" style={{marginTop: 170}}>{this.props.thermState.dp_msg}</h2>
+      <h1 className="text-center" style={{marginTop: 170}}>{this.props.thermState.dp_msg}</h1>
       </div>
     );
   }
