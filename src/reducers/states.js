@@ -97,14 +97,20 @@ export const autoStateOff = {
                 }
                                 
 
-export const InitialButtonsState = {
+export const initialSwState = {
     sw01: swStateOff,
     sw02: { ...swStateOff, img: fan_off},
     sw03: { ...swStateOff, img: heater_off},
     sw04: swStateOff,
-    sw05: { ...swStateOff, img: tv_off},
+    sw05: { ...swStateOff, img: tv_off}
+}
+
+export const initialCarState = {
     car: carStateOff,
-    car_lock: carLockStateOff,
+    car_lock: carLockStateOff
+}
+
+export const initialThermState = {
     ac: acStateOff,
     heat: heatStateOff,
     auto: autoStateOff,

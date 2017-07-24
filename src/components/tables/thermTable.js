@@ -1,20 +1,20 @@
 import React, { Component } from 'react';
-import { AcButton, HeatButton, AutoButton, IncTempButton, DecTempButton } from '../buttons';
+import { AcToggle, HeatToggle, AutoToggle, IncTempToggle, DecTempToggle } from '../toggles';
 import { Table } from 'react-bootstrap';
 import { Col } from 'react-grid-system';
 import { connect } from 'react-redux';
-import { thermStateListener, getCurrentTemp } from '../../actions/buttons';
+import { thermStateListener, getCurrentTemp } from '../../actions/thermActions';
 
 class ThermTable extends Component {
 
 
   componentWillMount() {
-    this.props.thermStateListener();
     this.props.getCurrentTemp();
+    this.props.thermStateListener();
   }
 
   componentDidMount() {
-    const intervalID = setInterval(this.props.getCurrentTemp(), 30000);
+    const intervalID = setInterval(() => this.props.getCurrentTemp(), 20000);
     this.setState({intervalID: intervalID});
   }
 
@@ -36,30 +36,30 @@ class ThermTable extends Component {
         <tbody>
           <tr>
             <td><h3>Temp</h3></td>
-            <td><h3>{this.props.buttonData.current_temp}</h3></td>
+            <td><h3>{this.props.toggleData.current_temp}</h3></td>
           </tr>
           <tr>
-            <td><AcButton /></td>
-            <td><img src={this.props.buttonData.ac.img} style={{ width: 80 }}></img></td>
+            <td><AcToggle /></td>
+            <td><img src={this.props.toggleData.ac.img} style={{ width: 80 }}></img></td>
           </tr>
           <tr>
-            <td><HeatButton /></td>
-            <td><img src={this.props.buttonData.heat.img} style={{ width: 80 }}></img></td>
+            <td><HeatToggle /></td>
+            <td><img src={this.props.toggleData.heat.img} style={{ width: 80 }}></img></td>
           </tr>
          <tr>
-            <td><AutoButton /></td>
-            <td><img src={this.props.buttonData.auto.img} style={{ width: 80 }}></img></td>
+            <td><AutoToggle /></td>
+            <td><img src={this.props.toggleData.auto.img} style={{ width: 80 }}></img></td>
           </tr>
         </tbody>
       </Table>
       <Col sm={1}>
-        <DecTempButton />
+        <DecTempToggle />
       </Col>
       <Col sm={1}>
-        <h2 style={{marginTop: 210, marginLeft: 360}}>{this.props.buttonData.desired_temp}F</h2>
+        <h2 style={{marginTop: 210, marginLeft: 360}}>{this.props.toggleData.desired_temp}F</h2>
       </Col>
       <Col sm={1}>
-        <IncTempButton />
+        <IncTempToggle />
       </Col>
       </div>
     );
@@ -68,7 +68,7 @@ class ThermTable extends Component {
 
 const mapStateToProps = (state) => {
     return {
-      buttonData: state.buttonToggle
+      toggleData: state.thermState
     };
 };
 

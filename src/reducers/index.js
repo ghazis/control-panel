@@ -1,6 +1,10 @@
 import { combineReducers } from 'redux';
-import { buttonToggle } from './buttons';
+import { swState } from './swReducer';
+import { carState } from './carReducer';
+import { thermState } from './thermReducer';
 
 export default combineReducers({
-	buttonToggle
+	swState,
+	carState,
+	thermState
 });

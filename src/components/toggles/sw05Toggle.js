@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import Toggle from 'material-ui/Toggle';
-import { setSwState } from '../../actions/buttons';
+import { setSwState } from '../../actions/swActions';
 
-class SW05Button extends Component {
+class SW05Toggle extends Component {
 
 
 	render() {
@@ -12,7 +12,7 @@ class SW05Button extends Component {
 
 		return (
 			<div>
-				<Toggle label={sw_device_name} toggled={this.props.buttonData.toggled} labelPosition="right" style={{marginBottom: 16}} onToggle={() => {this.props.setSwState('http://73.209.181.138/cmd?cmd=sw05'+ this.props.buttonData.cmd, this.props.buttonData.cmd, 'SW05')}}/>
+				<Toggle label={sw_device_name} toggled={this.props.toggleData.toggled} labelPosition="right" style={{marginBottom: 16}} onToggle={() => {this.props.setSwState('http://73.209.181.138/cmd?cmd=sw05'+ this.props.toggleData.cmd, this.props.toggleData.cmd, 'SW05')}}/>
 			</div>
 		)
 }
@@ -20,7 +20,7 @@ class SW05Button extends Component {
 
 const mapStateToProps = (state) => {
     return {
-    	buttonData: state.buttonToggle.sw05
+    	toggleData: state.swState.sw05
     };
 };
 
@@ -31,4 +31,4 @@ const mapDispatchToProps = (dispatch) => {
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)
-(SW05Button);
+(SW05Toggle);

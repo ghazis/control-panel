@@ -2,15 +2,15 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import FloatingActionButton from 'material-ui/FloatingActionButton';
 import Minus from 'material-ui/svg-icons/content/remove';
-import { decrementTemp } from '../../actions/buttons';
+import { decrementTemp } from '../../actions/thermActions';
 
-class DecTempButton extends Component {
+class DecTempToggle extends Component {
 
 
 	render() {
 		return (
 			<div>
-                <FloatingActionButton onTouchTap={() => {this.props.decrementTemp(this.props.buttonData.desired_temp-1)}} style={{ marginTop: 200, marginLeft: 360}}>
+                <FloatingActionButton onTouchTap={() => {this.props.decrementTemp(this.props.toggleData.desired_temp-1)}} style={{ marginTop: 200, marginLeft: 360}}>
                   <Minus />
                 </FloatingActionButton>
 			</div>
@@ -20,7 +20,7 @@ class DecTempButton extends Component {
 
 const mapStateToProps = (state) => {
     return {
-    	buttonData: state.buttonToggle
+    	toggleData: state.thermState
     };
 };
 
@@ -31,4 +31,4 @@ const mapDispatchToProps = (dispatch) => {
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)
-(DecTempButton);
+(DecTempToggle);

@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import Toggle from 'material-ui/Toggle';
-import { setThermState } from '../../actions/buttons';
+import { setThermState } from '../../actions/thermActions';
 
-class AutoButton extends Component {
+class AutoToggle extends Component {
 
 	render() {
 
@@ -11,7 +11,7 @@ class AutoButton extends Component {
 
 		return (
 			<div>
-				<Toggle label="Auto" disabled={false} toggled={this.props.toggled} labelPosition="right" style={{marginBottom: 16}} onToggle={() => {this.props.setThermState('http://73.209.181.138/cmd?cmd=auto'+ this.props.buttonData.cmd, this.props.buttonData.cmd, 'AUTO')}}/>
+				<Toggle label="Auto" disabled={false} toggled={this.props.toggled} labelPosition="right" style={{marginBottom: 16}} onToggle={() => {this.props.setThermState('http://73.209.181.138/cmd?cmd=auto'+ this.props.toggleData.cmd, this.props.toggleData.cmd, 'AUTO')}}/>
 			</div>
 		)
 }
@@ -19,8 +19,8 @@ class AutoButton extends Component {
 
 const mapStateToProps = (state) => {
     return {
-    	buttonData: state.buttonToggle.auto,
-    	toggled: state.buttonToggle.auto.toggled
+    	toggleData: state.thermState.auto,
+    	toggled: state.thermState.auto.toggled
     };
 };
 
@@ -31,4 +31,4 @@ const mapDispatchToProps = (dispatch) => {
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)
-(AutoButton);
+(AutoToggle);

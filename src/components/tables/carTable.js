@@ -1,9 +1,14 @@
 import React, { Component } from 'react';
-import { StartCarButton, LockCarButton } from '../buttons';
+import { CarStartToggle, CarLockToggle } from '../toggles';
 import { Table } from 'react-bootstrap';
 import { connect } from 'react-redux';
+import { carStateListener } from '../../actions/carActions';
 
 class CarTable extends Component {
+
+  componentWillMount() {
+    this.props.carStateListener();
+  }
 
   render () {
 
@@ -18,12 +23,12 @@ class CarTable extends Component {
         </thead>
         <tbody>
           <tr>
-            <td><StartCarButton /></td>
-            <td><img src={this.props.buttonData.car.img} style={{ width: 200 }}></img></td>
+            <td><CarStartToggle /></td>
+            <td><img src={this.props.toggleData.car.img} style={{ width: 200 }}></img></td>
           </tr>
           <tr>
-            <td><LockCarButton /></td>
-            <td><img src={this.props.buttonData.car_lock.img} style={{ width: 50 }}></img></td>
+            <td><CarLockToggle /></td>
+            <td><img src={this.props.toggleData.car_lock.img} style={{ width: 50 }}></img></td>
           </tr>
         </tbody>
       </Table>
@@ -34,9 +39,15 @@ class CarTable extends Component {
 
 const mapStateToProps = (state) => {
     return {
-      buttonData: state.buttonToggle
+      toggleData: state.carState
     };
 };
 
-export default connect(mapStateToProps)
+const mapDispatchToProps = (dispatch) => {
+    return {
+        carStateListener: () => dispatch(carStateListener())
+    };
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)
 (CarTable);
