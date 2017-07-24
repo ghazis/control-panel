@@ -7,7 +7,6 @@ import CarStartToggle from './carStartToggle';
 import CarLockToggle from './carLockToggle';
 import AcToggle from './acToggle';
 import HeatToggle from './heatToggle';
-import AutoToggle from './autoToggle';
 import IncTempToggle from './incTempToggle';
 import DecTempToggle from './decTempToggle';
 
@@ -22,7 +21,6 @@ export {
 	CarLockToggle,
 	AcToggle,
 	HeatToggle,
-	AutoToggle,
 	IncTempToggle,
 	DecTempToggle
 }

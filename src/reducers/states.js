@@ -79,22 +79,6 @@ export const heatStateOff = {
                     img: heat_off,
                     toggled: false
                 }
-
-export const autoStateOn = {
-                    name: 'Auto On',
-                    cmd: '_off',
-                    classname: 'btn-success',
-                    img: auto_on,
-                    toggled: true
-                }
-
-export const autoStateOff = {
-                    name: 'Auto Off',
-                    cmd: '_on',
-                    classname: 'btn-danger',
-                    img: auto_off,
-                    toggled: false
-                }
                                 
 
 export const initialSwState = {
@@ -113,7 +97,7 @@ export const initialCarState = {
 export const initialThermState = {
     ac: acStateOff,
     heat: heatStateOff,
-    auto: autoStateOff,
     current_temp: '75.000F',
-    desired_temp: 75
+    desired_temp: 75,
+    dp_msg: ""
 }

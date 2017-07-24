@@ -23,23 +23,23 @@ class HomeTable extends Component {
         <tbody>
           <tr>
             <td><SW01 /></td>
-            <td><img src={this.props.toggleData.sw01.img} style={{ width: 50 }}></img></td>
+            <td><img src={this.props.swState.sw01.img} style={{ width: 50 }}></img></td>
           </tr>
           <tr> 
             <td><SW02 /></td>
-            <td><img src={this.props.toggleData.sw02.img} style={{ width: 50 }}></img></td>
+            <td><img src={this.props.swState.sw02.img} style={{ width: 50 }}></img></td>
           </tr>
           <tr> 
             <td><SW03 /></td>
-            <td><img src={this.props.toggleData.sw03.img} style={{ width: 50 }}></img></td>
+            <td><img src={this.props.swState.sw03.img} style={{ width: 50 }}></img></td>
           </tr>
           <tr> 
             <td><SW04 /></td>
-            <td><img src={this.props.toggleData.sw04.img} style={{ width: 50 }}></img></td>
+            <td><img src={this.props.swState.sw04.img} style={{ width: 50 }}></img></td>
           </tr>
           <tr> 
             <td><SW05 /></td>
-            <td><img src={this.props.toggleData.sw05.img} style={{ width: 50 }}></img></td>
+            <td><img src={this.props.swState.sw05.img} style={{ width: 50 }}></img></td>
           </tr>
         </tbody>
       </Table>
@@ -50,7 +50,7 @@ class HomeTable extends Component {
 
 const mapStateToProps = (state) => {
     return {
-      toggleData: state.swState
+      swState: state.swState
     };
 };
 

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { AcToggle, HeatToggle, AutoToggle, IncTempToggle, DecTempToggle } from '../toggles';
+import { AcToggle, HeatToggle, IncTempToggle, DecTempToggle } from '../toggles';
 import { Table } from 'react-bootstrap';
 import { Col } from 'react-grid-system';
 import { connect } from 'react-redux';
@@ -36,31 +36,29 @@ class ThermTable extends Component {
         <tbody>
           <tr>
             <td><h3>Temp</h3></td>
-            <td><h3>{this.props.toggleData.current_temp}</h3></td>
+            <td><h3>{this.props.thermState.current_temp}</h3></td>
           </tr>
           <tr>
             <td><AcToggle /></td>
-            <td><img src={this.props.toggleData.ac.img} style={{ width: 80 }}></img></td>
+            <td><img src={this.props.thermState.ac.img} style={{ width: 80 }}></img></td>
           </tr>
           <tr>
             <td><HeatToggle /></td>
-            <td><img src={this.props.toggleData.heat.img} style={{ width: 80 }}></img></td>
-          </tr>
-         <tr>
-            <td><AutoToggle /></td>
-            <td><img src={this.props.toggleData.auto.img} style={{ width: 80 }}></img></td>
+            <td><img src={this.props.thermState.heat.img} style={{ width: 80 }}></img></td>
           </tr>
         </tbody>
       </Table>
+      <h2 className="text-center" style={{marginTop: 30}}>Set Temperature</h2>
       <Col sm={1}>
         <DecTempToggle />
       </Col>
       <Col sm={1}>
-        <h2 style={{marginTop: 210, marginLeft: 360}}>{this.props.toggleData.desired_temp}F</h2>
+        <h2 style={{marginTop: 50, marginLeft: 360}}>{this.props.thermState.desired_temp}F</h2>
       </Col>
       <Col sm={1}>
         <IncTempToggle />
       </Col>
+      <h2 className="text-center" style={{marginTop: 170}}>{this.props.thermState.dp_msg}</h2>
       </div>
     );
   }
@@ -68,7 +66,7 @@ class ThermTable extends Component {
 
 const mapStateToProps = (state) => {
     return {
-      toggleData: state.thermState
+      thermState: state.thermState
     };
 };
 

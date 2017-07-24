@@ -24,11 +24,11 @@ class CarTable extends Component {
         <tbody>
           <tr>
             <td><CarStartToggle /></td>
-            <td><img src={this.props.toggleData.car.img} style={{ width: 200 }}></img></td>
+            <td><img src={this.props.carState.car.img} style={{ width: 200 }}></img></td>
           </tr>
           <tr>
             <td><CarLockToggle /></td>
-            <td><img src={this.props.toggleData.car_lock.img} style={{ width: 50 }}></img></td>
+            <td><img src={this.props.carState.car_lock.img} style={{ width: 50 }}></img></td>
           </tr>
         </tbody>
       </Table>
@@ -39,7 +39,7 @@ class CarTable extends Component {
 
 const mapStateToProps = (state) => {
     return {
-      toggleData: state.carState
+      carState: state.carState
     };
 };
 

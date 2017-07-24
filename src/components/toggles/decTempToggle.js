@@ -10,7 +10,7 @@ class DecTempToggle extends Component {
 	render() {
 		return (
 			<div>
-                <FloatingActionButton onTouchTap={() => {this.props.decrementTemp(this.props.toggleData.desired_temp-1)}} style={{ marginTop: 200, marginLeft: 360}}>
+                <FloatingActionButton onTouchTap={() => {this.props.decrementTemp(this.props.thermState.desired_temp-1)}} style={{ marginTop: 40, marginLeft: 360}}>
                   <Minus />
                 </FloatingActionButton>
 			</div>
@@ -20,7 +20,7 @@ class DecTempToggle extends Component {
 
 const mapStateToProps = (state) => {
     return {
-    	toggleData: state.thermState
+    	thermState: state.thermState
     };
 };
 

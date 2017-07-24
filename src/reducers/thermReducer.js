@@ -13,12 +13,15 @@ export function thermState(state = initialThermState, action) {
                 ...state,
                     desired_temp: action.desired_temp
             }
+        case 'SET_DP_MSG':
+            return {
+                ...state,
+                    dp_msg: action.msg
+            }
         case 'BUTTON_TOGGLE_ON_AC':
             return {
                 ...state,
-                    ac: acStateOn,
-                    heat: heatStateOff,
-                    auto: autoStateOff
+                    ac: acStateOn
             }
         case 'BUTTON_TOGGLE_OFF_AC':
             return {
@@ -28,27 +31,14 @@ export function thermState(state = initialThermState, action) {
         case 'BUTTON_TOGGLE_ON_HEAT':
             return {
                 ...state,
-                    heat: heatStateOn,
-                    ac: acStateOff,
-                    auto: autoStateOff
+                    heat: heatStateOn
             }
         case 'BUTTON_TOGGLE_OFF_HEAT':
             return {
                 ...state,
                     heat: heatStateOff
             }
-        case 'BUTTON_TOGGLE_ON_AUTO':
-            return {
-                ...state,
-                    auto: autoStateOn,
-                    ac: acStateOff,
-                    heat: heatStateOff
-            }
-        case 'BUTTON_TOGGLE_OFF_AUTO':
-            return {
-                ...state,
-                    auto: autoStateOff
-            }
+
         default:
             return state;
     }
