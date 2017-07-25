@@ -74,7 +74,7 @@ export function setState(dispatch, ac_state, heat_state, current_temp, desired_t
 
 export function get_state() {
     return (dispatch, getState) => {
-        fetch('http://73.209.181.138/get_state')
+        fetch('http://gharcontrol.com/get_state')
             .then((response) => {
                 if (!response.ok) {
                     throw Error(response.statusText);
@@ -90,14 +90,14 @@ export function get_state() {
 export function decrementTemp(new_temp) {
     return (dispatch, getState) => {
         dispatch(setDesiredTemp(new_temp));
-        fetch('http://73.209.181.138/set_temp?temp=' + new_temp);
+        fetch('http://gharcontrol.com/set_temp?temp=' + new_temp);
     };
 }
 
 export function incrementTemp(new_temp) {
     return (dispatch, getState) => {
         dispatch(setDesiredTemp(new_temp));
-        fetch('http://73.209.181.138/set_temp?temp=' + new_temp);
+        fetch('http://gharcontrol.com/set_temp?temp=' + new_temp);
     };
 }
 
@@ -124,12 +124,12 @@ export function runAutoMode(current_temp, desired_temp, name, cmd) {
             clearInterval(getState().buttonToggle.autoIntervalID);
             clearInterval(getState().buttonToggle.intervalID);
             const auto_type = getState().buttonToggle.auto_type;
-            fetch('http://73.209.181.138/set_auto_state?auto_state=0')
+            fetch('http://gharcontrol.com/set_auto_state?auto_state=0')
             dispatch(buttonToggleOff(name));
             if (auto_type == 'AC') {
-                fetch('http://73.209.181.138/cmd?cmd=ac_off');
+                fetch('http://gharcontrol.com/cmd?cmd=ac_off');
             } else {
-                fetch('http://73.209.181.138/cmd?cmd=heat_off');
+                fetch('http://gharcontrol.com/cmd?cmd=heat_off');
             }
         }
         const intervalID = setInterval(() => dispatch(get_state()), 5000);
@@ -147,15 +147,15 @@ export function AutoModeOn() {
         const auto_type = getState().buttonToggle.auto_type;
         {/*clearInterval(getState().buttonToggle.intervalID);*/}
         dispatch(buttonToggleOn(name));
-        fetch('http://73.209.181.138/set_auto_state?auto_state=1');
+        fetch('http://gharcontrol.com/set_auto_state?auto_state=1');
         if (current_temp > desired_temp) {
-            fetch('http://73.209.181.138/cmd?cmd=ac_on');
+            fetch('http://gharcontrol.com/cmd?cmd=ac_on');
         } else if (current_temp < desired_temp) {
-            fetch('http://73.209.181.138/cmd?cmd=heat_on');
+            fetch('http://gharcontrol.com/cmd?cmd=heat_on');
         } else if (current_temp == desired_temp && auto_type == 'AC') {
-            fetch('http://73.209.181.138/cmd?cmd=ac_off');
+            fetch('http://gharcontrol.com/cmd?cmd=ac_off');
         } else if (current_temp == desired_temp && auto_type == 'HEAT') {
-            fetch('http://73.209.181.138/cmd?cmd=heat_off');
+            fetch('http://gharcontrol.com/cmd?cmd=heat_off');
         }
     };
 }

@@ -9,7 +9,7 @@ class CarLockToggle extends Component {
 	render() {
 		return (
 			<div>
-				<Toggle label="Lock Car" thumbStyle={{width: 40, height: 40}} thumbSwitchedStyle={{left: 75}} labelStyle={{left: 50, fontSize: 30, marginTop: 10}} trackStyle={{width: 70, height: 35}} toggled={this.props.toggleData.toggled} labelPosition="right" style={{marginBottom: 16}} onToggle={() => {this.props.setCarState('http://73.209.181.138/cmd?cmd=lock'+ this.props.toggleData.cmd, this.props.toggleData.cmd, 'CAR_LOCK')}}/>
+				<Toggle label="Lock Car" thumbStyle={{width: 40, height: 40}} thumbSwitchedStyle={{left: 75}} labelStyle={{left: 50, fontSize: 30, marginTop: 10}} trackStyle={{width: 70, height: 35}} toggled={this.props.toggleData.toggled} labelPosition="right" style={{marginBottom: 16}} onToggle={() => {this.props.setCarState('http://gharcontrol.com/cmd?cmd=lock'+ this.props.toggleData.cmd, this.props.toggleData.cmd, 'CAR_LOCK')}}/>
 			</div>
 		)
 }
