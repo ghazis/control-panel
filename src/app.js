@@ -13,7 +13,7 @@ class App extends Component {
 
     signOut = () => {
     firebase.auth().signOut().then(function() {
-      // Sign-out successful.
+    window.location = "https://www.google.com/accounts/Logout?continue=https://appengine.google.com/_ah/logout?continue=http://gharcontrol.com"
     }).catch(function(error) {
       // An error happened.
     });
