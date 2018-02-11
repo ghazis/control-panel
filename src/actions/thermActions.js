@@ -29,14 +29,15 @@ export function thermStateListener() {
             var heat_state = Number(snapshot.val().heat_state)
             var current_temp = snapshot.val().current_temp;
             var desired_temp = snapshot.val().desired_temp;
-            if (desired_temp == current_temp) {
-                firebase.database().ref('therm_state/ac_state').set("0");
-                firebase.database().ref('therm_state/heat_state').set("0");
-                fetch('http://gharcontrol.com/cmd?cmd=heat_off')
-                fetch('http://gharcontrol.com/cmd?cmd=ac_off')
-                var ac_state = 0;
-                var heat_state = 0;
-            }
+            //Disabled this functionality since these are a server related tasks
+            //if (desired_temp == current_temp) {
+                //firebase.database().ref('therm_state/ac_state').set("0");
+                //firebase.database().ref('therm_state/heat_state').set("0");
+                //fetch('http://gharcontrol.com/cmd?cmd=heat_off')
+                //fetch('http://gharcontrol.com/cmd?cmd=ac_off')
+                //var ac_state = 0;
+                //var heat_state = 0;
+            //}
             if (ac_state == 1) {
                 dispatch(buttonToggleOn('AC'));
             } else if (heat_state == 1) {
@@ -86,18 +87,17 @@ export function setThermState(url, cmd, name) {
         var desired_temp = getState().thermState.desired_temp;
         var lower_name = name.toLowerCase();
         if (cmd == '_on') {
+            //Disabled certain functionality since these are server related tasks
             if (lower_name == 'heat' && desired_temp > current_temp) {
-                fetch(url);
+                //fetch(url);
                 firebase.database().ref('therm_state/ac_state').set("0");
-                firebase.database().ref('therm_state/auto_state').set("0");
                 firebase.database().ref('therm_state/' + lower_name + '_state').set("1");
             } else if (lower_name == 'heat' && desired_temp < current_temp) {
                 dispatch(setDpMsg("Desired Temperature Has Already Been Reached"));
                 setTimeout(() => dispatch(setDpMsg("")), 3000);
             } else if (lower_name == 'ac' && desired_temp < current_temp) {
-                fetch(url);
+                //fetch(url);
                 firebase.database().ref('therm_state/heat_state').set("0");
-                firebase.database().ref('therm_state/auto_state').set("0");
                 firebase.database().ref('therm_state/' + lower_name + '_state').set("1");
             } else if (lower_name == 'ac' && desired_temp > current_temp) {
                 dispatch(setDpMsg("Desired Temperature Has Already Been Reached"));
@@ -107,7 +107,7 @@ export function setThermState(url, cmd, name) {
                 setTimeout(() => dispatch(setDpMsg("")), 3000);
             }
         } else if (cmd == '_off') {
-            fetch(url);
+            //fetch(url);
             firebase.database().ref('therm_state/' + lower_name + '_state').set("0");
         }
     };
