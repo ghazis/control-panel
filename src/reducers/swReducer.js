@@ -6,7 +6,7 @@ export function swState(state = initialSwState, action) {
         case 'BUTTON_TOGGLE_ON_SW01':
             return {
                 ...state,
-                    sw01:swStateOn
+                    sw01: swStateOn
             }
         case 'BUTTON_TOGGLE_OFF_SW01':
             return {
@@ -16,22 +16,22 @@ export function swState(state = initialSwState, action) {
         case 'BUTTON_TOGGLE_ON_SW02':
             return {
                 ...state,
-                    sw02: {...swStateOn, img: fan_on}
+                    sw02: swStateOn
             }
         case 'BUTTON_TOGGLE_OFF_SW02':
             return {
                 ...state,
-                    sw02: {...swStateOff, img: fan_off}
+                    sw02: swStateOff
             }
         case 'BUTTON_TOGGLE_ON_SW03':
             return {
                 ...state,
-                    sw03: {...swStateOn, img: heater_on}
+                    sw03: swStateOn
             }
         case 'BUTTON_TOGGLE_OFF_SW03':
             return {
                 ...state,
-                    sw03: {...swStateOff, img: heater_off}
+                    sw03: swStateOff
             }
         case 'BUTTON_TOGGLE_ON_SW04':
             return {

@@ -83,8 +83,8 @@ export const heatStateOff = {
 
 export const initialSwState = {
     sw01: swStateOff,
-    sw02: { ...swStateOff, img: fan_off},
-    sw03: { ...swStateOff, img: heater_off},
+    sw02: swStateOff,
+    sw03: swStateOff,
     sw04: swStateOff,
     sw05: { ...swStateOff, img: tv_off}
 }
