@@ -8,7 +8,7 @@ class SW04Toggle extends Component {
 
 	render() {
 
-		const sw_device_name = 'Living Room Lights';
+		const sw_device_name = 'Family Room Lights';
 
 		return (
 			<div>

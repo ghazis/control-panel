@@ -8,7 +8,7 @@ class SW02Toggle extends Component {
 
 	render() {
 
-		const sw_device_name = 'Fan';
+		const sw_device_name = 'Living Room Lamp 1';
 
 		return (
 			<div>
