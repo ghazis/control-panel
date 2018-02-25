@@ -31,8 +31,8 @@
     "url-loader": "^0.5.9"
   },
   "scripts": {
-    "start": "webpack-dev-server --progress --inline",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "webpack-dev-server",
+    "test": "webpack --watch"
   },
   "author": "",
   "license": "ISC"
