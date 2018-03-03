@@ -24,7 +24,7 @@ def run():
         heat_state = int(therm_info['heat_state'])
         desired_temp = therm_info['desired_temp']
         temp = get_temp()
-        requests.put('https://control-panel-307d0.firebaseio.com/therm_state/current_temp.json',data=temp)
+        requests.put('https://control-panel-307d0.firebaseio.com/therm_state/current_temp.json',data=str(temp))
         if ac_state == 1:
             ac_state_prev = 1
             if desired_temp == temp or desired_temp > temp:
