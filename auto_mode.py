@@ -24,17 +24,18 @@ def run():
         heat_state = int(therm_info['heat_state'])
         desired_temp = therm_info['desired_temp']
         temp = get_temp()
+        requests.put('https://control-panel-307d0.firebaseio.com/therm_state/current_temp.json',data=temp)
         if ac_state == 1:
             ac_state_prev = 1
-            if desired_temp == temp:
+            if desired_temp == temp or desired_temp > temp:
                 #turn_off AC
                 send_cmd('ac_off')
             elif temp > desired_temp+1:
-                #turn_off AC
+                #turn_on AC
                 send_cmd('ac_on')
         elif heat_state == 1:
             heat_state_prev = 1
-            if desired_temp == temp:
+            if desired_temp == temp or desired_temp < temp:
                 #turn_off heat
                 send_cmd('heat_off')
             if temp < desired_temp-1:
