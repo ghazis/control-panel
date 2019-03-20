@@ -33,8 +33,8 @@ export function thermStateListener() {
             //if (desired_temp == current_temp) {
                 //firebase.database().ref('therm_state/ac_state').set("0");
                 //firebase.database().ref('therm_state/heat_state').set("0");
-                //fetch('http://gharcontrol.com/cmd?cmd=heat_off')
-                //fetch('http://gharcontrol.com/cmd?cmd=ac_off')
+                //fetch('http://gharcontrol.com:3000/cmd?cmd=heat_off')
+                //fetch('http://gharcontrol.com:3000/cmd?cmd=ac_off')
                 //var ac_state = 0;
                 //var heat_state = 0;
             //}
@@ -67,7 +67,7 @@ export function incrementTemp(new_temp) {
 
 export function getCurrentTemp() {
     return (dispatch, getState) => {
-        fetch('http://gharcontrol.com/get_temp')
+        fetch('http://gharcontrol.com:3000/get_temp')
             .then((response) => {
                 if (!response.ok) {
                     throw Error(response.statusText);

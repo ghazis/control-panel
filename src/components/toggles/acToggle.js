@@ -8,7 +8,7 @@ class AcToggle extends Component {
 	render() {
 		return (
 			<div>
-				<Toggle label="AC" thumbStyle={{width: 40, height: 40}} thumbSwitchedStyle={{left: 75}} labelStyle={{left: 50, fontSize: 30, marginTop: 10}} trackStyle={{width: 70, height: 35}} disabled={this.props.toggleData.disable} toggled={this.props.toggleData.toggled} labelPosition="right" style={{marginBottom: 16}} onToggle={() => {this.props.setThermState('http://gharcontrol.com/cmd?cmd=ac'+ this.props.toggleData.cmd, this.props.toggleData.cmd, 'AC')}}/>
+				<Toggle label="AC" thumbStyle={{width: 40, height: 40}} thumbSwitchedStyle={{left: 75}} labelStyle={{left: 50, fontSize: 30, marginTop: 10}} trackStyle={{width: 70, height: 35}} disabled={this.props.toggleData.disable} toggled={this.props.toggleData.toggled} labelPosition="right" style={{marginBottom: 16}} onToggle={() => {this.props.setThermState('http://gharcontrol.com:3000/cmd?cmd=ac'+ this.props.toggleData.cmd, this.props.toggleData.cmd, 'AC')}}/>
 			</div>
 		)
 }

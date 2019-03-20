@@ -8,7 +8,7 @@ class HeatToggle extends Component {
 	render() {
 		return (
 			<div>
-				<Toggle label="Heat" thumbStyle={{width: 40, height: 40}} thumbSwitchedStyle={{left: 75, backgroundColor: 'red'}} labelStyle={{left: 50, fontSize: 30, marginTop: 10}} trackStyle={{width: 70, height: 35}} disabled={this.props.toggleData.disable} trackSwitchedStyle={{backgroundColor: '#ff9d9d'}} toggled={this.props.toggleData.toggled} labelPosition="right" style={{marginBottom: 16}} onToggle={() => {this.props.setThermState('http://gharcontrol.com/cmd?cmd=heat'+ this.props.toggleData.cmd, this.props.toggleData.cmd, 'HEAT')}}/>
+				<Toggle label="Heat" thumbStyle={{width: 40, height: 40}} thumbSwitchedStyle={{left: 75, backgroundColor: 'red'}} labelStyle={{left: 50, fontSize: 30, marginTop: 10}} trackStyle={{width: 70, height: 35}} disabled={this.props.toggleData.disable} trackSwitchedStyle={{backgroundColor: '#ff9d9d'}} toggled={this.props.toggleData.toggled} labelPosition="right" style={{marginBottom: 16}} onToggle={() => {this.props.setThermState('http://gharcontrol.com:3000/cmd?cmd=heat'+ this.props.toggleData.cmd, this.props.toggleData.cmd, 'HEAT')}}/>
 			</div>
 		)
 }
