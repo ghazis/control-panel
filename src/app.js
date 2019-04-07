@@ -28,6 +28,7 @@ class App extends Component {
 				<LinkContainer to="/home" style={{fontSize: 30}}><NavItem eventKey="1">Home</NavItem></LinkContainer>
 				<LinkContainer to="/car" style={{fontSize: 30}}><NavItem eventKey="2">Car</NavItem></LinkContainer>
 				<LinkContainer to="/therm" style={{fontSize: 30}}><NavItem eventKey="3">Therm</NavItem></LinkContainer>
+        <LinkContainer to="/garage" style={{fontSize: 30}}><NavItem eventKey="4">Garage</NavItem></LinkContainer>
 			</Nav>
       		{Routes}
        	</div>
